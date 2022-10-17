@@ -8,51 +8,43 @@ class CustomAppBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        border: Border(
-          bottom: BorderSide(
-            width: 2,
-            color: Colors.grey.shade200,
-          ),
-        ),
-      ),
-      child: AppBar(
-        elevation: 0,
-        backgroundColor: Colors.blueGrey[50],
-        flexibleSpace: Padding(
-          padding:
-              const EdgeInsets.only(right: 24, left: 24, top: 24, bottom: 24),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              Row(
-                children: [
-                  GestureDetector(
-                    onTap: () {
-                      Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const HomeScreen()));
-                    },
-                    child: Image.asset(
-                      "assets/logo/a_Logo.png",
-                      height: 200,
-                    ),
+    return AppBar(
+      elevation: 6,
+      backgroundColor: Color(0xff2B3138),
+      flexibleSpace: Padding(
+        padding:
+            const EdgeInsets.only(right: 24, left: 24, top: 24, bottom: 24),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Row(
+              children: [
+                GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => const HomeScreen()));
+                  },
+                  child: Image.asset(
+                    "assets/logo/a_Logo.png",
+                    color: Colors.white,
+                    height: 200,
                   ),
-                  Text(
-                    "Adnan Turgay Aydin",
-                    style: TaydinStyles.notoSans14Bold.copyWith(fontSize: 20),
-                  )
-                ],
-              ),
-              Text(
-                "Flutter Developer",
-                style: TaydinStyles.notoSans18Bold
-                    .copyWith(color: TaydinColors.flutterBlue),
-              ),
-            ],
-          ),
+                ),
+                Text(
+                  "Adnan Turgay Aydin",
+                  style: TaydinStyles.notoSans14Bold
+                      .copyWith(fontSize: 20, color: Colors.grey),
+                )
+              ],
+            ),
+            Text(
+              "Flutter Developer",
+              style: TaydinStyles.notoSans18Bold
+                  .copyWith(color: TaydinColors.flutterBlue),
+            ),
+          ],
         ),
       ),
     );

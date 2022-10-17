@@ -48,7 +48,7 @@ class _SidebarPageState extends State<SidebarPage> {
             MaterialPageRoute(builder: (context) => const HomeScreen()));
       },
       body: _body(size, context),
-      backgroundColor: Colors.grey.shade200,
+      // backgroundColor: Colors.white,
       textStyle: TaydinStyles.textStyle,
       titleStyle: TaydinStyles.titleStyle,
       toggleTitleStyle: TaydinStyles.titleStyle,
