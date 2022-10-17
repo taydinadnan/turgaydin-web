@@ -255,4 +255,16 @@ abstract class TaydinStyles {
     fontSize: 16,
     color: Colors.black,
   );
+
+  static const textStyle = TextStyle(
+    fontSize: 15,
+    fontStyle: FontStyle.italic,
+    color: Colors.black,
+  );
+
+  static const titleStyle = TextStyle(
+      fontSize: 20,
+      fontStyle: FontStyle.italic,
+      fontWeight: FontWeight.bold,
+      color: Colors.black);
 }

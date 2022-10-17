@@ -19,7 +19,7 @@ class CustomAppBar extends StatelessWidget {
       ),
       child: AppBar(
         elevation: 0,
-        backgroundColor: const Color(0xFFfcfcfc),
+        backgroundColor: Colors.blueGrey[50],
         flexibleSpace: Padding(
           padding:
               const EdgeInsets.only(right: 24, left: 24, top: 24, bottom: 24),
@@ -40,9 +40,9 @@ class CustomAppBar extends StatelessWidget {
                       height: 200,
                     ),
                   ),
-                  const Text(
+                  Text(
                     "Adnan Turgay Aydin",
-                    style: TaydinStyles.notoSans14Bold,
+                    style: TaydinStyles.notoSans14Bold.copyWith(fontSize: 20),
                   )
                 ],
               ),
