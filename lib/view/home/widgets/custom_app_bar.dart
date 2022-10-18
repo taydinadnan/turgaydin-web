@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
 import 'package:turgaydin/utils/styles.dart';
 import 'package:turgaydin/utils/taydin_colors.dart';
 import 'package:turgaydin/view/home/pages/home_screen.dart';
@@ -23,10 +24,15 @@ class CustomAppBar extends StatelessWidget {
                   onTap: () {
                     Navigator.pushReplacement(
                       context,
-                      MaterialPageRoute(
-                        builder: (context) => const HomeScreen(),
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation1, animation2) =>
+                            const HomeScreen(),
+                        transitionDuration: Duration.zero,
+                        reverseTransitionDuration: Duration.zero,
                       ),
                     );
+
+                    SideBarNotifier.getInstance.setheadlineHome();
                   },
                   child: Image.asset(
                     "assets/logo/a_Logo.png",

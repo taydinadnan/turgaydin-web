@@ -19,7 +19,6 @@ class SideBarNotifier with ChangeNotifier {
     return _instance!;
   }
 
-  late List<CollapsibleItem> items;
   Widget headline = const HomePage();
 
   List<CollapsibleItem> get generateItems {
@@ -72,39 +71,7 @@ class SideBarNotifier with ChangeNotifier {
     ];
   }
 
-  late List<CollapsibleItem> rightBarItems;
-
-  List<CollapsibleItem> get generateItemsForRightBar {
-    return [
-      CollapsibleItem(
-        text: 'Home',
-        icon: Icons.social_distance,
-        onPressed: () {
-          notifyListeners();
-        },
-        isSelected: true,
-      ),
-      CollapsibleItem(
-        text: 'About Me',
-        icon: Icons.link,
-        onPressed: () {
-          notifyListeners();
-        },
-      ),
-      CollapsibleItem(
-        text: 'My Work',
-        icon: Icons.install_desktop,
-        onPressed: () {
-          notifyListeners();
-        },
-      ),
-    ];
+  void setheadlineHome() {
+    headline = const HomePage();
   }
-
-  // late bool _collapsAction = true;
-  // bool get collapsAction => _collapsAction;
-  // void setSideBarCollaps(bool value) {
-  //   _collapsAction = value;
-  //   notifyListeners();
-  // }
 }
