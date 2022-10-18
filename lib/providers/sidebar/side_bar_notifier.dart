@@ -7,7 +7,6 @@ import 'package:turgaydin/view/home/pages/home_page.dart';
 import 'package:turgaydin/view/myWork/pages/my_work_page.dart';
 import 'package:turgaydin/view/resume/pages/resume_page.dart';
 
-
 class SideBarNotifier with ChangeNotifier {
   static SideBarNotifier? _instance;
 
@@ -21,7 +20,7 @@ class SideBarNotifier with ChangeNotifier {
   }
 
   late List<CollapsibleItem> items;
-  Widget headline = const SizedBox();
+  Widget headline = const HomePage();
 
   List<CollapsibleItem> get generateItems {
     return [
@@ -29,9 +28,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Home',
         icon: Icons.home,
         onPressed: () {
-
           headline = const HomePage();
-
 
           notifyListeners();
         },
@@ -41,7 +38,6 @@ class SideBarNotifier with ChangeNotifier {
         text: 'About Me',
         icon: Icons.person,
         onPressed: () {
-
           headline = const AboutMePage();
 
           notifyListeners();
@@ -51,7 +47,6 @@ class SideBarNotifier with ChangeNotifier {
         text: 'My Work',
         icon: Icons.work,
         onPressed: () {
-
           headline = const MyWorkPage();
 
           notifyListeners();
@@ -61,7 +56,6 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Resume',
         icon: Icons.document_scanner_rounded,
         onPressed: () {
-
           headline = const ResumePage();
 
           notifyListeners();
