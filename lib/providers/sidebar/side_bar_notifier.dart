@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
 
 import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
+import 'package:turgaydin/view/contact/pages/contact_page.dart';
 import 'package:turgaydin/view/home/pages/home_page.dart';
 import 'package:turgaydin/view/myWork/pages/my_work_page.dart';
 import 'package:turgaydin/view/resume/pages/resume_page.dart';
@@ -65,7 +66,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Contact Me',
         icon: Icons.contact_page,
         onPressed: () {
-          // headline = 'Contact Me';
+          headline = ContactPage();
           notifyListeners();
         },
       ),
