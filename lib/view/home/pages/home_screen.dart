@@ -16,7 +16,7 @@ class HomeScreen extends StatelessWidget {
           child: CustomAppBar(),
         ),
         body: Consumer<SideBarNotifier>(
-          builder: (context, plansNotifier, child) => const SidebarPage(),
+          builder: (context, plansNotifier, child) => SidebarPage(),
         ));
   }
 }

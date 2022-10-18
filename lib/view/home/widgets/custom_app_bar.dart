@@ -10,7 +10,7 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppBar(
       elevation: 6,
-      backgroundColor: Color(0xff2B3138),
+      backgroundColor: const Color(0xff2B3138),
       flexibleSpace: Padding(
         padding:
             const EdgeInsets.only(right: 24, left: 24, top: 24, bottom: 24),
