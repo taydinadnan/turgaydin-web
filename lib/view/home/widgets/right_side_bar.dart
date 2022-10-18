@@ -24,6 +24,7 @@ class _RightSideBarPageState extends State<RightSideBarPage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+
             GestureDetector(
               onTap: () {
                 print("Clicked 1");
@@ -63,6 +64,7 @@ class _RightSideBarPageState extends State<RightSideBarPage> {
                 ),
               ),
             ),
+
           ],
         ),
       ),
