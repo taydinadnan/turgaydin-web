@@ -257,14 +257,22 @@ abstract class TaydinStyles {
   );
 
   static const textStyle = TextStyle(
+    fontFamily: 'NotoSans',
     fontSize: 15,
     fontStyle: FontStyle.italic,
     color: Colors.black,
   );
 
   static const titleStyle = TextStyle(
+      fontFamily: 'NotoSans',
       fontSize: 20,
       fontStyle: FontStyle.italic,
       fontWeight: FontWeight.bold,
       color: Colors.black);
+
+  static const notoSans30 = TextStyle(
+    fontFamily: 'NotoSans',
+    fontWeight: FontWeight.w700,
+    fontSize: 30,
+  );
 }

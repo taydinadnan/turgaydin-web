@@ -7,7 +7,7 @@ class AboutMePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.green,
-      child: Center(child: Text("HOME PAGE")),
+      child: const Center(child: Text("HOME PAGE")),
     );
   }
 }

@@ -1,6 +1,5 @@
 import 'package:collapsible_sidebar/collapsible_sidebar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
 import 'package:turgaydin/view/contact/pages/contact_page.dart';
@@ -66,7 +65,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Contact Me',
         icon: Icons.contact_page,
         onPressed: () {
-          headline = ContactPage();
+          headline = const ContactPage();
           notifyListeners();
         },
       ),
@@ -81,7 +80,6 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Home',
         icon: Icons.social_distance,
         onPressed: () {
-          print("Clicked");
           notifyListeners();
         },
         isSelected: true,
@@ -90,7 +88,6 @@ class SideBarNotifier with ChangeNotifier {
         text: 'About Me',
         icon: Icons.link,
         onPressed: () {
-          print("Clicked");
           notifyListeners();
         },
       ),
@@ -98,10 +95,16 @@ class SideBarNotifier with ChangeNotifier {
         text: 'My Work',
         icon: Icons.install_desktop,
         onPressed: () {
-          print("Clicked");
           notifyListeners();
         },
       ),
     ];
   }
+
+  // late bool _collapsAction = true;
+  // bool get collapsAction => _collapsAction;
+  // void setSideBarCollaps(bool value) {
+  //   _collapsAction = value;
+  //   notifyListeners();
+  // }
 }

@@ -7,7 +7,7 @@ class MyWorkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.amber,
-      child: Center(child: Text("HOME PAGE")),
+      child: const Center(child: Text("HOME PAGE")),
     );
   }
 }
