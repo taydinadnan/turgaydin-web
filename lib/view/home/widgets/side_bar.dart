@@ -64,14 +64,8 @@ class _SidebarPageState extends State<SidebarPage> {
         child: Transform.rotate(
           angle: math.pi / 2,
           child: Transform.translate(
-            offset: Offset(-size.height * 0.3, -size.width * 0.23),
-            child: Text(
-              SideBarNotifier.getInstance.headline,
-              style: Theme.of(context).textTheme.headline1,
-              overflow: TextOverflow.visible,
-              softWrap: false,
-            ),
-          ),
+              offset: Offset(-size.height * 0.3, -size.width * 0.23),
+              child: SideBarNotifier.getInstance.headline),
         ),
       ),
     );

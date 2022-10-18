@@ -1,5 +1,10 @@
 import 'package:collapsible_sidebar/collapsible_sidebar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
+import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
+import 'package:turgaydin/view/home/pages/home_page.dart';
+import 'package:turgaydin/view/myWork/pages/my_work_page.dart';
+import 'package:turgaydin/view/resume/pages/resume_page.dart';
 
 class SideBarNotifier with ChangeNotifier {
   static SideBarNotifier? _instance;
@@ -14,7 +19,7 @@ class SideBarNotifier with ChangeNotifier {
   }
 
   late List<CollapsibleItem> items;
-  String headline = "";
+  Widget headline = const SizedBox();
 
   List<CollapsibleItem> get generateItems {
     return [
@@ -22,7 +27,8 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Home',
         icon: Icons.home,
         onPressed: () {
-          headline = 'Home';
+          headline = const HomePage();
+
           notifyListeners();
         },
         isSelected: true,
@@ -31,7 +37,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'About Me',
         icon: Icons.person,
         onPressed: () {
-          headline = 'About Me';
+          headline = const AboutMePage();
           notifyListeners();
         },
       ),
@@ -39,7 +45,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'My Work',
         icon: Icons.work,
         onPressed: () {
-          headline = 'My Work';
+          headline = const MyWorkPage();
           notifyListeners();
         },
       ),
@@ -47,7 +53,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Resume',
         icon: Icons.document_scanner_rounded,
         onPressed: () {
-          headline = 'Resume';
+          headline = const ResumePage();
           notifyListeners();
         },
       ),
@@ -55,7 +61,39 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Contact Me',
         icon: Icons.contact_page,
         onPressed: () {
-          headline = 'Contact Me';
+          // headline = 'Contact Me';
+          notifyListeners();
+        },
+      ),
+    ];
+  }
+
+  late List<CollapsibleItem> rightBarItems;
+
+  List<CollapsibleItem> get generateItemsForRightBar {
+    return [
+      CollapsibleItem(
+        text: 'Home',
+        icon: Icons.social_distance,
+        onPressed: () {
+          print("Clicked");
+          notifyListeners();
+        },
+        isSelected: true,
+      ),
+      CollapsibleItem(
+        text: 'About Me',
+        icon: Icons.link,
+        onPressed: () {
+          print("Clicked");
+          notifyListeners();
+        },
+      ),
+      CollapsibleItem(
+        text: 'My Work',
+        icon: Icons.install_desktop,
+        onPressed: () {
+          print("Clicked");
           notifyListeners();
         },
       ),
