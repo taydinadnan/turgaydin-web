@@ -24,30 +24,47 @@ class _RightSideBarPageState extends State<RightSideBarPage> {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                "assets/logo/instagram.png",
-                color: Colors.grey,
-                height: 25,
+
+            GestureDetector(
+              onTap: () {
+                print("Clicked 1");
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  color: Colors.grey,
+                  "assets/logo/linkedin.png",
+                  height: 25,
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                color: Colors.grey,
-                "assets/logo/github.png",
-                height: 25,
+            GestureDetector(
+              onTap: () {
+                print("Clicked 2");
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  color: Colors.grey,
+                  "assets/logo/github.png",
+                  height: 25,
+                ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Image.asset(
-                color: Colors.grey,
-                "assets/logo/linkedin.png",
-                height: 25,
+            GestureDetector(
+              onTap: () {
+                print("Clicked 3");
+              },
+              child: Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Image.asset(
+                  "assets/logo/instagram.png",
+                  color: Colors.grey,
+                  height: 25,
+                ),
               ),
-            )
+            ),
+
           ],
         ),
       ),

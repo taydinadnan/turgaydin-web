@@ -63,7 +63,9 @@ class _SidebarPageState extends State<SidebarPage> {
       height: size.height,
       width: double.infinity - 400,
       color: Colors.white,
+
       child: SideBarNotifier.getInstance.headline,
+
     );
   }
 }

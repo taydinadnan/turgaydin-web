@@ -1,7 +1,12 @@
 import 'package:collapsible_sidebar/collapsible_sidebar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/material.dart';
+
+import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
 import 'package:turgaydin/view/home/pages/home_page.dart';
+import 'package:turgaydin/view/myWork/pages/my_work_page.dart';
+import 'package:turgaydin/view/resume/pages/resume_page.dart';
+
 
 class SideBarNotifier with ChangeNotifier {
   static SideBarNotifier? _instance;
@@ -24,7 +29,9 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Home',
         icon: Icons.home,
         onPressed: () {
-          headline = HomePage();
+
+          headline = const HomePage();
+
 
           notifyListeners();
         },
@@ -34,7 +41,9 @@ class SideBarNotifier with ChangeNotifier {
         text: 'About Me',
         icon: Icons.person,
         onPressed: () {
-          // headline = 'About Me';
+
+          headline = const AboutMePage();
+
           notifyListeners();
         },
       ),
@@ -42,7 +51,9 @@ class SideBarNotifier with ChangeNotifier {
         text: 'My Work',
         icon: Icons.work,
         onPressed: () {
-          // headline = 'My Work';
+
+          headline = const MyWorkPage();
+
           notifyListeners();
         },
       ),
@@ -50,7 +61,9 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Resume',
         icon: Icons.document_scanner_rounded,
         onPressed: () {
-          // headline = 'Resume';
+
+          headline = const ResumePage();
+
           notifyListeners();
         },
       ),

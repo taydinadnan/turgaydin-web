@@ -1,14 +1,12 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage({Key? key}) : super(key: key);
+class ResumePage extends StatelessWidget {
+  const ResumePage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-
-      color: Colors.green,
-
+      color: Colors.yellow,
       child: Center(child: Text("HOME PAGE")),
     );
   }
