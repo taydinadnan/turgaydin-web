@@ -19,7 +19,7 @@ class SideBarNotifier with ChangeNotifier {
     return _instance!;
   }
 
-  Widget headline = const HomePage();
+  Widget headline = HomePage();
 
   List<CollapsibleItem> get generateItems {
     return [
@@ -27,7 +27,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Home',
         icon: Icons.home,
         onPressed: () {
-          headline = const HomePage();
+          headline = HomePage();
 
           notifyListeners();
         },
@@ -72,6 +72,6 @@ class SideBarNotifier with ChangeNotifier {
   }
 
   void setheadlineHome() {
-    headline = const HomePage();
+    headline = HomePage();
   }
 }

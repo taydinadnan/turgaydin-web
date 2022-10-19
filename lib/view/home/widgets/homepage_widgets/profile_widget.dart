@@ -31,52 +31,68 @@ class ProfileWidget extends StatelessWidget {
             ]),
         height: MediaQuery.of(context).size.height * 0.5,
         width: MediaQuery.of(context).size.height * 0.4,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        child: Stack(
           children: [
-            Padding(
-              padding: const EdgeInsets.only(top: 25),
-              child: Container(
-                decoration: const BoxDecoration(
-                    shape: BoxShape.circle,
-                    color: TaydinColors.backgorundColor,
-                    boxShadow: [
-                      BoxShadow(
-                        color: TaydinColors.backgroundGrey,
-                        blurRadius: 0,
-                        spreadRadius: 0.01,
-                        offset: Offset(1, 1),
+            Container(
+              child: Image.asset(
+                "assets/logo/bgImage.png",
+                color: TaydinColors.white.withOpacity(0.3),
+                height: MediaQuery.of(context).size.height,
+                width: MediaQuery.of(context).size.width,
+                fit: BoxFit.cover,
+              ),
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Padding(
+                  padding: const EdgeInsets.only(top: 25),
+                  child: Center(
+                    child: Container(
+                      decoration: const BoxDecoration(
+                          shape: BoxShape.circle,
+                          color: TaydinColors.backgorundColor,
+                          boxShadow: [
+                            BoxShadow(
+                              color: TaydinColors.backgroundGrey,
+                              blurRadius: 0,
+                              spreadRadius: 0.01,
+                              offset: Offset(1, 1),
+                            ),
+                            BoxShadow(
+                              color: TaydinColors.backgroundGrey,
+                              blurRadius: 10,
+                              spreadRadius: 0.01,
+                              offset: Offset(1, 1),
+                            ),
+                          ]),
+                      child: CircleAvatar(
+                        radius: MediaQuery.of(context).size.width * 0.09,
+                        backgroundImage:
+                            const AssetImage("assets/logo/profile.png"),
                       ),
-                      BoxShadow(
-                        color: TaydinColors.backgroundGrey,
-                        blurRadius: 10,
-                        spreadRadius: 0.01,
-                        offset: Offset(1, 1),
-                      ),
-                    ]),
-                child: CircleAvatar(
-                  radius: MediaQuery.of(context).size.width * 0.09,
-                  backgroundImage: const AssetImage("assets/logo/profile.png"),
+                    ),
+                  ),
                 ),
-              ),
+                Text(
+                  "Adnan Turgay Aydin",
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TaydinStyles.notoSans30.copyWith(
+                    color: Colors.white,
+                  ),
+                ),
+                Text(
+                  "Flutter Developer",
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
+                  style: TaydinStyles.notoSans30.copyWith(
+                    color: TaydinColors.flutterBlue,
+                  ),
+                ),
+                const SizedBox(height: 25),
+              ],
             ),
-            Text(
-              "Adnan Turgay Aydin",
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: TaydinStyles.notoSans30.copyWith(
-                color: Colors.white,
-              ),
-            ),
-            Text(
-              "Flutter Developer",
-              textAlign: TextAlign.center,
-              overflow: TextOverflow.ellipsis,
-              style: TaydinStyles.notoSans30.copyWith(
-                color: TaydinColors.flutterBlue,
-              ),
-            ),
-            const SizedBox(height: 25),
           ],
         ),
       ),
