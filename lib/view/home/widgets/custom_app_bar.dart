@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
 import 'package:turgaydin/utils/styles.dart';
 import 'package:turgaydin/utils/taydin_colors.dart';
 import 'package:turgaydin/view/home/pages/home_screen.dart';
@@ -22,27 +23,38 @@ class CustomAppBar extends StatelessWidget {
                 GestureDetector(
                   onTap: () {
                     Navigator.pushReplacement(
-                        context,
-                        MaterialPageRoute(
-                            builder: (context) => const HomeScreen()));
+                      context,
+                      PageRouteBuilder(
+                        pageBuilder: (context, animation1, animation2) =>
+                            const HomeScreen(),
+                        transitionDuration: Duration.zero,
+                        reverseTransitionDuration: Duration.zero,
+                      ),
+                    );
+
+                    SideBarNotifier.getInstance.setheadlineHome();
                   },
                   child: Image.asset(
                     "assets/logo/a_Logo.png",
-                    color: Colors.white,
-                    height: 200,
+                    color: TaydinColors.white,
+                    height: 150,
                   ),
                 ),
                 Text(
                   "Adnan Turgay Aydin",
+                  textAlign: TextAlign.center,
+                  overflow: TextOverflow.ellipsis,
                   style: TaydinStyles.notoSans14Bold
-                      .copyWith(fontSize: 20, color: Colors.grey),
+                      .copyWith(fontSize: 25, color: TaydinColors.white),
                 )
               ],
             ),
             Text(
               "Flutter Developer",
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
               style: TaydinStyles.notoSans18Bold
-                  .copyWith(color: TaydinColors.flutterBlue),
+                  .copyWith(color: TaydinColors.flutterBlue, fontSize: 20),
             ),
           ],
         ),

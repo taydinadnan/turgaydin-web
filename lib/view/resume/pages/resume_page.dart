@@ -7,7 +7,7 @@ class ResumePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       color: Colors.yellow,
-      child: Center(child: Text("HOME PAGE")),
+      child: const Center(child: Text("HOME PAGE")),
     );
   }
 }

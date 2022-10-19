@@ -1,70 +1,61 @@
-import 'package:collapsible_sidebar/collapsible_sidebar.dart';
 import 'package:flutter/material.dart';
-import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
-import 'dart:math' as math show pi;
+
+import 'package:turgaydin/utils/taydin_colors.dart';
 
 class RightSideBarPage extends StatefulWidget {
   const RightSideBarPage({super.key});
 
   @override
-  _RightSideBarPageState createState() => _RightSideBarPageState();
+  RightSideBarPageState createState() => RightSideBarPageState();
 }
 
-class _RightSideBarPageState extends State<RightSideBarPage> {
+class RightSideBarPageState extends State<RightSideBarPage> {
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Container(
         decoration: BoxDecoration(
-            color: const Color(0xff2B3138),
+            color: TaydinColors.backgorundColor,
             borderRadius: BorderRadius.circular(15)),
         height: 50,
         width: 150,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-
             GestureDetector(
-              onTap: () {
-                print("Clicked 1");
-              },
+              onTap: () {},
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
-                  color: Colors.grey,
+                  color: TaydinColors.socialIconGrey,
                   "assets/logo/linkedin.png",
                   height: 25,
                 ),
               ),
             ),
             GestureDetector(
-              onTap: () {
-                print("Clicked 2");
-              },
+              onTap: () {},
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
-                  color: Colors.grey,
+                  color: TaydinColors.socialIconGrey,
                   "assets/logo/github.png",
                   height: 25,
                 ),
               ),
             ),
             GestureDetector(
-              onTap: () {
-                print("Clicked 3");
-              },
+              onTap: () {},
               child: Padding(
                 padding: const EdgeInsets.all(8.0),
                 child: Image.asset(
                   "assets/logo/instagram.png",
-                  color: Colors.grey,
+                  color: TaydinColors.socialIconGrey,
                   height: 25,
                 ),
               ),
             ),
-
           ],
         ),
       ),

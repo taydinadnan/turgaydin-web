@@ -1,6 +1,5 @@
 import 'package:collapsible_sidebar/collapsible_sidebar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/material.dart';
 
 import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
 import 'package:turgaydin/view/contact/pages/contact_page.dart';
@@ -20,8 +19,7 @@ class SideBarNotifier with ChangeNotifier {
     return _instance!;
   }
 
-  late List<CollapsibleItem> items;
-  Widget headline = const HomePage();
+  Widget headline = HomePage();
 
   List<CollapsibleItem> get generateItems {
     return [
@@ -29,7 +27,7 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Home',
         icon: Icons.home,
         onPressed: () {
-          headline = const HomePage();
+          headline = HomePage();
 
           notifyListeners();
         },
@@ -66,42 +64,14 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Contact Me',
         icon: Icons.contact_page,
         onPressed: () {
-          headline = ContactPage();
+          headline = const ContactPage();
           notifyListeners();
         },
       ),
     ];
   }
 
-  late List<CollapsibleItem> rightBarItems;
-
-  List<CollapsibleItem> get generateItemsForRightBar {
-    return [
-      CollapsibleItem(
-        text: 'Home',
-        icon: Icons.social_distance,
-        onPressed: () {
-          print("Clicked");
-          notifyListeners();
-        },
-        isSelected: true,
-      ),
-      CollapsibleItem(
-        text: 'About Me',
-        icon: Icons.link,
-        onPressed: () {
-          print("Clicked");
-          notifyListeners();
-        },
-      ),
-      CollapsibleItem(
-        text: 'My Work',
-        icon: Icons.install_desktop,
-        onPressed: () {
-          print("Clicked");
-          notifyListeners();
-        },
-      ),
-    ];
+  void setheadlineHome() {
+    headline = HomePage();
   }
 }
