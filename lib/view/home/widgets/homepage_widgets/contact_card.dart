@@ -8,10 +8,10 @@ class HoverCardContact extends StatefulWidget {
   const HoverCardContact({super.key, this.onPressed, required this.context});
 
   @override
-  _HoverCardContactState createState() => _HoverCardContactState();
+  HoverCardContactState createState() => HoverCardContactState();
 }
 
-class _HoverCardContactState extends State<HoverCardContact>
+class HoverCardContactState extends State<HoverCardContact>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation _animation;
@@ -96,13 +96,11 @@ class _HoverCardContactState extends State<HoverCardContact>
                         1),
                     child: Stack(
                       children: [
-                        Container(
-                          child: Image.asset(
-                            "assets/logo/bgImage.png",
-                            color: TaydinColors.white.withOpacity(0.3),
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width,
-                          ),
+                        Image.asset(
+                          "assets/logo/bgImage.png",
+                          color: TaydinColors.white.withOpacity(0.3),
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
                         ),
                         Center(
                             child: Text(

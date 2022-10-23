@@ -33,14 +33,12 @@ class ProfileWidget extends StatelessWidget {
         width: MediaQuery.of(context).size.height * 0.4,
         child: Stack(
           children: [
-            Container(
-              child: Image.asset(
-                "assets/logo/bgImage.png",
-                color: TaydinColors.white.withOpacity(0.3),
-                height: MediaQuery.of(context).size.height,
-                width: MediaQuery.of(context).size.width,
-                fit: BoxFit.cover,
-              ),
+            Image.asset(
+              "assets/logo/bgImage.png",
+              color: TaydinColors.white.withOpacity(0.3),
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              fit: BoxFit.cover,
             ),
             Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,

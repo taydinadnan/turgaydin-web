@@ -35,35 +35,8 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
-        home: const HomeScreen(),
+        home: HomeScreen(),
       ),
     );
   }
 }
-
-// import 'package:flutter/material.dart';
-// import 'package:turgaydin/view/home/widgets/side_bar.dart';
-
-// void main() => runApp(MyApp());
-
-// class MyApp extends StatelessWidget {
-//   @override
-//   Widget build(BuildContext context) {
-//     return MaterialApp(
-//       debugShowCheckedModeBanner: false,
-//       title: 'Sidebar ui',
-//       home: Scaffold(
-//         body: SidebarPage(),
-//         floatingActionButton: FloatingActionButton(
-//           onPressed: () {
-//             ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-//               content: Text('Yay! Button Pressed!'),
-//             ));
-//           },
-//           backgroundColor: Colors.green,
-//           child: const Icon(Icons.navigation),
-//         ),
-//       ),
-//     );
-//   }
-// }

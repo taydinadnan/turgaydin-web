@@ -8,10 +8,10 @@ class HoverCardMyWork extends StatefulWidget {
   const HoverCardMyWork({super.key, this.onPressed, required this.context});
 
   @override
-  _HoverCardMyWorkState createState() => _HoverCardMyWorkState();
+  HoverCardMyWorkState createState() => HoverCardMyWorkState();
 }
 
-class _HoverCardMyWorkState extends State<HoverCardMyWork>
+class HoverCardMyWorkState extends State<HoverCardMyWork>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation _animation;
@@ -96,13 +96,11 @@ class _HoverCardMyWorkState extends State<HoverCardMyWork>
                         1),
                     child: Stack(
                       children: [
-                        Container(
-                          child: Image.asset(
-                            "assets/logo/bgImage.png",
-                            color: TaydinColors.white.withOpacity(0.3),
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width,
-                          ),
+                        Image.asset(
+                          "assets/logo/bgImage.png",
+                          color: TaydinColors.white.withOpacity(0.3),
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
                         ),
                         Center(
                             child: Text(
