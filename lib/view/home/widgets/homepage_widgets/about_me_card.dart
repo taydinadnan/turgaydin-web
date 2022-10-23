@@ -8,10 +8,10 @@ class HoverCardAboutMe extends StatefulWidget {
   const HoverCardAboutMe({super.key, this.onPressed, required this.context});
 
   @override
-  _HoverCardAboutMeState createState() => _HoverCardAboutMeState();
+  HoverCardAboutMeState createState() => HoverCardAboutMeState();
 }
 
-class _HoverCardAboutMeState extends State<HoverCardAboutMe>
+class HoverCardAboutMeState extends State<HoverCardAboutMe>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
   late Animation _animation;
@@ -96,13 +96,11 @@ class _HoverCardAboutMeState extends State<HoverCardAboutMe>
                         1),
                     child: Stack(
                       children: [
-                        Container(
-                          child: Image.asset(
-                            "assets/logo/bgImage.png",
-                            color: TaydinColors.white.withOpacity(0.3),
-                            height: MediaQuery.of(context).size.height,
-                            width: MediaQuery.of(context).size.width,
-                          ),
+                        Image.asset(
+                          "assets/logo/bgImage.png",
+                          color: TaydinColors.white.withOpacity(0.3),
+                          height: MediaQuery.of(context).size.height,
+                          width: MediaQuery.of(context).size.width,
                         ),
                         Center(
                             child: Text(

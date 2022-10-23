@@ -26,7 +26,7 @@ class CustomAppBar extends StatelessWidget {
                       context,
                       PageRouteBuilder(
                         pageBuilder: (context, animation1, animation2) =>
-                            const HomeScreen(),
+                            HomeScreen(),
                         transitionDuration: Duration.zero,
                         reverseTransitionDuration: Duration.zero,
                       ),

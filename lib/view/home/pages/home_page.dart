@@ -23,57 +23,47 @@ class HomePage extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
           ),
         ),
-        Container(
-          child: SingleChildScrollView(
-            scrollDirection: Axis.horizontal,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                const Padding(
-                  padding: EdgeInsets.only(top: 50.0),
-                  child: ProfileWidget(),
+        SingleChildScrollView(
+          scrollDirection: Axis.horizontal,
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const Padding(
+                padding: EdgeInsets.only(top: 50.0),
+                child: ProfileWidget(),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 50.0),
+                child: Column(
+                  children: [
+                    HoverCardAboutMe(
+                      context: "About Me",
+                      onPressed: () {},
+                    ),
+                    HoverCardMyWork(
+                      context: "My Work",
+                      onPressed: () {},
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(top: 50.0),
-                  child: Column(
-                    children: [
-                      HoverCardAboutMe(
-                        context: "About Me",
-                        onPressed: () {
-                          print("PRESSED");
-                        },
-                      ),
-                      HoverCardMyWork(
-                        context: "My Work",
-                        onPressed: () {
-                          print("PRESSED");
-                        },
-                      ),
-                    ],
-                  ),
+              ),
+              Padding(
+                padding: const EdgeInsets.only(left: 50.0, top: 50),
+                child: Column(
+                  children: [
+                    HoverCardResume(
+                      context: "Resume",
+                      onPressed: () {},
+                    ),
+                    HoverCardContact(
+                      context: "Contact",
+                      onPressed: () {},
+                    ),
+                  ],
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 50.0, top: 50),
-                  child: Column(
-                    children: [
-                      HoverCardResume(
-                        context: "Resume",
-                        onPressed: () {
-                          print("PRESSED");
-                        },
-                      ),
-                      HoverCardContact(
-                        context: "Contact",
-                        onPressed: () {
-                          print("PRESSED");
-                        },
-                      ),
-                    ],
-                  ),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
       ],
