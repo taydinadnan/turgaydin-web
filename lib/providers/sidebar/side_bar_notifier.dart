@@ -74,4 +74,32 @@ class SideBarNotifier with ChangeNotifier {
   void setheadlineHome() {
     headline = const HomePage();
   }
+
+  bool _isHomeVisible = true;
+  bool get isHomeVisible => _isHomeVisible;
+  void setIsHomeVisible(bool value) {
+    _isHomeVisible = value;
+    notifyListeners();
+  }
+
+  bool _isAboutMeVisible = true;
+  bool get isAboutMeVisible => _isAboutMeVisible;
+  void setIsAboutMeVisible(bool value) {
+    _isAboutMeVisible = value;
+    notifyListeners();
+  }
+
+  bool _isResumeVisible = true;
+  bool get isResumeVisible => _isResumeVisible;
+  void setIsResumeVisible(bool value) {
+    _isResumeVisible = value;
+    notifyListeners();
+  }
+
+  bool _isContactVisible = true;
+  bool get isContactVisible => _isContactVisible;
+  void setIsContactVisible(bool value) {
+    _isContactVisible = value;
+    notifyListeners();
+  }
 }

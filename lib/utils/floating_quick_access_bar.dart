@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
 import 'package:turgaydin/utils/responsive.dart';
 
 class FloatingQuickAccessBar extends StatefulWidget {
@@ -36,7 +37,44 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
             value ? _isHovering[i] = true : _isHovering[i] = false;
           });
         },
-        onTap: () {},
+        onTap: () {
+          if (items[i] == items[0]) {
+            print("Home");
+            SideBarNotifier.getInstance.setIsHomeVisible(true);
+            SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+            SideBarNotifier.getInstance.setIsResumeVisible(false);
+            SideBarNotifier.getInstance.setIsContactVisible(false);
+
+            print("Home Visible: ${SideBarNotifier.getInstance.isHomeVisible}");
+          }
+          if (items[i] == items[1]) {
+            print("About Me");
+            SideBarNotifier.getInstance.setIsHomeVisible(false);
+            SideBarNotifier.getInstance.setIsAboutMeVisible(true);
+            SideBarNotifier.getInstance.setIsResumeVisible(false);
+            SideBarNotifier.getInstance.setIsContactVisible(false);
+            print(
+                "About Me Visible: ${SideBarNotifier.getInstance.isAboutMeVisible}");
+          }
+          if (items[i] == items[2]) {
+            print("Resume");
+            SideBarNotifier.getInstance.setIsHomeVisible(false);
+            SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+            SideBarNotifier.getInstance.setIsResumeVisible(true);
+            SideBarNotifier.getInstance.setIsContactVisible(false);
+            print(
+                "Resume Visible: ${SideBarNotifier.getInstance.isResumeVisible}");
+          }
+          if (items[i] == items[3]) {
+            print("Contact");
+            SideBarNotifier.getInstance.setIsHomeVisible(false);
+            SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+            SideBarNotifier.getInstance.setIsResumeVisible(false);
+            SideBarNotifier.getInstance.setIsContactVisible(true);
+            print(
+                "Contact Visible: ${SideBarNotifier.getInstance.isContactVisible}");
+          }
+        },
         child: Text(
           items[i],
           style: TextStyle(
@@ -99,7 +137,48 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                               InkWell(
                                 splashColor: Colors.transparent,
                                 hoverColor: Colors.transparent,
-                                onTap: () {},
+                                onTap: () {
+                                  if (items[pageIndex] == items[0]) {
+                                    SideBarNotifier.getInstance
+                                        .setIsHomeVisible(true);
+                                    SideBarNotifier.getInstance
+                                        .setIsAboutMeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsResumeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsContactVisible(false);
+                                  }
+                                  if (items[pageIndex] == items[1]) {
+                                    SideBarNotifier.getInstance
+                                        .setIsHomeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsAboutMeVisible(true);
+                                    SideBarNotifier.getInstance
+                                        .setIsResumeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsContactVisible(false);
+                                  }
+                                  if (items[pageIndex] == items[2]) {
+                                    SideBarNotifier.getInstance
+                                        .setIsHomeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsAboutMeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsResumeVisible(true);
+                                    SideBarNotifier.getInstance
+                                        .setIsContactVisible(false);
+                                  }
+                                  if (items[pageIndex] == items[3]) {
+                                    SideBarNotifier.getInstance
+                                        .setIsHomeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsAboutMeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsResumeVisible(false);
+                                    SideBarNotifier.getInstance
+                                        .setIsContactVisible(true);
+                                  }
+                                },
                                 child: Text(
                                   items[pageIndex],
                                   style: const TextStyle(
