@@ -75,10 +75,58 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                 "Contact Visible: ${SideBarNotifier.getInstance.isContactVisible}");
           }
         },
-        child: Text(
-          items[i],
-          style: TextStyle(
-            color: _isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
+        child: InkWell(
+          onTap: () {
+            if (items[i] == items[0]) {
+              print("Home");
+              SideBarNotifier.getInstance.setIsHomeVisible(true);
+              SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+              SideBarNotifier.getInstance.setIsResumeVisible(false);
+              SideBarNotifier.getInstance.setIsContactVisible(false);
+
+              print(
+                  "Home Visible: ${SideBarNotifier.getInstance.isHomeVisible}");
+            }
+            if (items[i] == items[1]) {
+              print("About Me");
+              SideBarNotifier.getInstance.setIsHomeVisible(false);
+              SideBarNotifier.getInstance.setIsAboutMeVisible(true);
+              SideBarNotifier.getInstance.setIsResumeVisible(false);
+              SideBarNotifier.getInstance.setIsContactVisible(false);
+              print(
+                  "About Me Visible: ${SideBarNotifier.getInstance.isAboutMeVisible}");
+            }
+            if (items[i] == items[2]) {
+              print("Resume");
+              SideBarNotifier.getInstance.setIsHomeVisible(false);
+              SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+              SideBarNotifier.getInstance.setIsResumeVisible(true);
+              SideBarNotifier.getInstance.setIsContactVisible(false);
+              print(
+                  "Resume Visible: ${SideBarNotifier.getInstance.isResumeVisible}");
+            }
+            if (items[i] == items[3]) {
+              print("Contact");
+              SideBarNotifier.getInstance.setIsHomeVisible(false);
+              SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+              SideBarNotifier.getInstance.setIsResumeVisible(false);
+              SideBarNotifier.getInstance.setIsContactVisible(true);
+              print(
+                  "Contact Visible: ${SideBarNotifier.getInstance.isContactVisible}");
+            }
+          },
+          child: Container(
+            height: widget.screenSize.height / 20,
+            width: widget.screenSize.width / 7,
+            child: Center(
+              child: Text(
+                items[i],
+                style: TextStyle(
+                  color:
+                      _isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
+                ),
+              ),
+            ),
           ),
         ),
       );
@@ -120,72 +168,79 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                     (int pageIndex) => Padding(
                       padding:
                           EdgeInsets.only(top: widget.screenSize.height / 80),
-                      child: Card(
-                        elevation: 4,
-                        child: Padding(
-                          padding: EdgeInsets.only(
-                              top: widget.screenSize.height / 45,
-                              bottom: widget.screenSize.height / 45,
-                              left: widget.screenSize.width / 20),
-                          child: Row(
-                            children: [
-                              Icon(
-                                icons[pageIndex],
-                                color: Colors.blueGrey,
-                              ),
-                              SizedBox(width: widget.screenSize.width / 20),
-                              InkWell(
-                                splashColor: Colors.transparent,
-                                hoverColor: Colors.transparent,
-                                onTap: () {
-                                  if (items[pageIndex] == items[0]) {
-                                    SideBarNotifier.getInstance
-                                        .setIsHomeVisible(true);
-                                    SideBarNotifier.getInstance
-                                        .setIsAboutMeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsResumeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsContactVisible(false);
-                                  }
-                                  if (items[pageIndex] == items[1]) {
-                                    SideBarNotifier.getInstance
-                                        .setIsHomeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsAboutMeVisible(true);
-                                    SideBarNotifier.getInstance
-                                        .setIsResumeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsContactVisible(false);
-                                  }
-                                  if (items[pageIndex] == items[2]) {
-                                    SideBarNotifier.getInstance
-                                        .setIsHomeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsAboutMeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsResumeVisible(true);
-                                    SideBarNotifier.getInstance
-                                        .setIsContactVisible(false);
-                                  }
-                                  if (items[pageIndex] == items[3]) {
-                                    SideBarNotifier.getInstance
-                                        .setIsHomeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsAboutMeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsResumeVisible(false);
-                                    SideBarNotifier.getInstance
-                                        .setIsContactVisible(true);
-                                  }
-                                },
-                                child: Text(
+                      child: InkWell(
+                        onTap: () {
+                          if (items[pageIndex] == items[0]) {
+                            print("Home");
+                            SideBarNotifier.getInstance.setIsHomeVisible(true);
+                            SideBarNotifier.getInstance
+                                .setIsAboutMeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsResumeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsContactVisible(false);
+
+                            print(
+                                "Home Visible: ${SideBarNotifier.getInstance.isHomeVisible}");
+                          }
+                          if (items[pageIndex] == items[1]) {
+                            print("About Me");
+                            SideBarNotifier.getInstance.setIsHomeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsAboutMeVisible(true);
+                            SideBarNotifier.getInstance
+                                .setIsResumeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsContactVisible(false);
+                            print(
+                                "About Me Visible: ${SideBarNotifier.getInstance.isAboutMeVisible}");
+                          }
+                          if (items[pageIndex] == items[2]) {
+                            print("Resume");
+                            SideBarNotifier.getInstance.setIsHomeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsAboutMeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsResumeVisible(true);
+                            SideBarNotifier.getInstance
+                                .setIsContactVisible(false);
+                            print(
+                                "Resume Visible: ${SideBarNotifier.getInstance.isResumeVisible}");
+                          }
+                          if (items[pageIndex] == items[3]) {
+                            print("Contact");
+                            SideBarNotifier.getInstance.setIsHomeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsAboutMeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsResumeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsContactVisible(true);
+                            print(
+                                "Contact Visible: ${SideBarNotifier.getInstance.isContactVisible}");
+                          }
+                        },
+                        child: Card(
+                          elevation: 4,
+                          child: Padding(
+                            padding: EdgeInsets.only(
+                                top: widget.screenSize.height / 45,
+                                bottom: widget.screenSize.height / 45,
+                                left: widget.screenSize.width / 20),
+                            child: Row(
+                              children: [
+                                Icon(
+                                  icons[pageIndex],
+                                  color: Colors.blueGrey,
+                                ),
+                                SizedBox(width: widget.screenSize.width / 20),
+                                Text(
                                   items[pageIndex],
                                   style: const TextStyle(
                                       color: Colors.blueGrey, fontSize: 16),
                                 ),
-                              ),
-                            ],
+                              ],
+                            ),
                           ),
                         ),
                       ),

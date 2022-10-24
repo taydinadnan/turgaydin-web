@@ -102,4 +102,12 @@ class SideBarNotifier with ChangeNotifier {
     _isContactVisible = value;
     notifyListeners();
   }
+
+  bool _isHovered = false;
+  bool get isHovered => _isHovered;
+  void onEntered(bool value) {
+    _isHovered = value;
+    print(value);
+    notifyListeners();
+  }
 }

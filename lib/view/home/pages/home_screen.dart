@@ -8,6 +8,7 @@ import 'package:turgaydin/utils/floating_quick_access_bar.dart';
 import 'package:turgaydin/utils/responsive.dart';
 import 'package:turgaydin/utils/welcome_tiles.dart';
 import 'package:turgaydin/utils/top_bar_contents.dart';
+import 'dart:js' as js;
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -41,6 +42,46 @@ class HomeScreenState extends State<HomeScreen> {
         : 1;
 
     return Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.endFloat,
+        floatingActionButton: Column(
+          children: [
+            Padding(
+              padding: EdgeInsets.only(top: screenSize.height / 2),
+              child: FloatingActionButton(
+                onPressed: () {
+                  js.context
+                      .callMethod('open', ['https://github.com/taydinadnan']);
+                },
+                backgroundColor: Colors.white,
+                splashColor: Colors.purple,
+                hoverColor: Colors.grey.shade300,
+                elevation: 12,
+                focusElevation: 5,
+                child: Image.asset(
+                  "assets/logo/github.png",
+                ),
+              ),
+            ),
+            const SizedBox(height: 8),
+            FloatingActionButton(
+              onPressed: () {
+                js.context.callMethod(
+                    'open', ['https://www.linkedin.com/in/taydinadnan/']);
+              },
+              backgroundColor: Colors.white,
+              splashColor: Colors.purple,
+              hoverColor: Colors.grey.shade300,
+              elevation: 12,
+              focusElevation: 5,
+              child: Image.asset(
+                "assets/logo/linkedin.png",
+                height: 30,
+                color: Colors.blue,
+              ),
+            ),
+          ],
+        ),
+        backgroundColor: Color(0xFF493149).withOpacity(0.09),
         extendBodyBehindAppBar: true,
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppBar(
@@ -75,7 +116,9 @@ class HomeScreenState extends State<HomeScreen> {
                       width: screenSize.width,
                       child: Image.asset(
                         'assets/logo/thumbnailv2.png',
-                        fit: BoxFit.fitWidth,
+                        fit: ResponsiveWidget.isSmallScreen(context)
+                            ? BoxFit.fitHeight
+                            : BoxFit.fitWidth,
                       ),
                     ),
                     Column(

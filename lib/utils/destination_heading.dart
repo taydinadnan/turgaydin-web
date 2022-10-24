@@ -15,7 +15,7 @@ class DestinationHeading extends StatelessWidget {
     return ResponsiveWidget.isSmallScreen(context)
         ? Container(
             padding: EdgeInsets.only(
-              top: screenSize.height / 20,
+              top: screenSize.height / 30,
               bottom: screenSize.height / 20,
             ),
             width: screenSize.width,
@@ -28,20 +28,15 @@ class DestinationHeading extends StatelessWidget {
           )
         : Container(
             padding: EdgeInsets.only(
-              top: screenSize.height / 10,
+              top: screenSize.height / 30,
               bottom: screenSize.height / 15,
             ),
             width: screenSize.width,
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: screenSize.width / 5,
-              ),
-              child: Text(
-                'My Noteworthy Projects',
-                textAlign: TextAlign.start,
-                style: TaydinStyles.notoSans20Bold
-                    .copyWith(color: Colors.black, fontSize: 40),
-              ),
+            child: Text(
+              'My Noteworthy Projects',
+              textAlign: TextAlign.center,
+              style: TaydinStyles.notoSans20Bold
+                  .copyWith(color: Colors.black, fontSize: 40),
             ),
           );
   }

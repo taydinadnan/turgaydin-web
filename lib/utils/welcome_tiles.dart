@@ -38,37 +38,40 @@ class WelcomeTiles extends StatelessWidget {
             child: SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Container(
-                  height: screenSize.height / 2.5,
                   width: screenSize.width / 1,
                   decoration: BoxDecoration(
                     // color: Colors.green,
                     borderRadius: BorderRadius.circular(16),
                   ),
-                  child: Container(
-                    height: screenSize.height / 2.5,
-                    width: screenSize.width / 1,
-                    decoration: BoxDecoration(
-                      color: Colors.purpleAccent.withOpacity(0.02),
-                      borderRadius: BorderRadius.circular(30),
-                    ),
+                  child: Padding(
+                    padding: const EdgeInsets.all(25.0),
                     child: Column(
                       children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                              left: 25, right: 25, top: 10),
-                          child: RichText(
-                            text: TextSpan(
-                              text: 'Hello!, \n\n',
-                              style: TaydinStyles.notoSans20Bold
-                                  .copyWith(color: Colors.black, fontSize: 16),
-                              children: <TextSpan>[
-                                TextSpan(
-                                    text:
-                                        'My name is Adnan Turgay and I enjoy creating things that live on the internet. My interest in mobile/web development started in 2020 when I decided to convert designs to applications - turning my passion into a profession. Fast-forward to today, and I have had the privilege of working for a good, product-based organization. I have strong UI and UX knowledge. Always open to learning and open to criticism.Keen to pursue a career in Flutter and Dart.',
-                                    style: TaydinStyles.notoSans20Bold.copyWith(
-                                        color: Colors.black, fontSize: 16)),
-                              ],
-                            ),
+                        RichText(
+                          textAlign: TextAlign.justify,
+                          text: TextSpan(
+                            text: 'Hi, my name is\n',
+                            style: TaydinStyles.notoSans20Bold.copyWith(
+                                color: const Color(0xFF623F54), fontSize: 16),
+                            children: <TextSpan>[
+                              TextSpan(
+                                text: 'Adnan Turgay. \n',
+                                style: TaydinStyles.notoSans20Bold.copyWith(
+                                  color: Colors.black,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 30,
+                                ),
+                              ),
+                              TextSpan(
+                                text:
+                                    "I'am a software engineer. I enjoy creating things that live on the internet ! My interest in mobile/web development started in 2020 when I decided to convert designs to applications - turning my passion into a profession. Fast-forward to today, and I have had the privilege of working for a good, product-based organization. I have strong UI and UX knowledge. Always open to learning and open to criticism. Keen to pursue a career in Flutter and Dart.",
+                                style: TaydinStyles.poppins16Bold.copyWith(
+                                  color: Colors.black.withOpacity(0.9),
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         SingleChildScrollView(
@@ -102,7 +105,7 @@ class WelcomeTiles extends StatelessWidget {
                                         ),
                                       ],
                                     ),
-                                    SizedBox(width: screenSize.width / 30),
+                                    // SizedBox(width: screenSize.width / 30),
                                   ],
                                 ),
                               ),
@@ -121,68 +124,82 @@ class WelcomeTiles extends StatelessWidget {
               right: screenSize.width / 15,
             ),
             child: Container(
-              height: screenSize.height / 2.5,
-              width: screenSize.width / 1,
               decoration: BoxDecoration(
-                color: Colors.purpleAccent.withOpacity(0.02),
-                borderRadius: BorderRadius.circular(30),
+                borderRadius: BorderRadius.circular(16),
               ),
               child: Column(
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(top: 30),
+                    padding: const EdgeInsets.only(top: 0),
                     child: SizedBox(
-                        // color: Colors.green,
-                        height: screenSize.height / 5,
-                        width: screenSize.width / 1,
                         child: Padding(
-                          padding: EdgeInsets.only(
-                              left: screenSize.width / 7,
-                              right: screenSize.width / 7),
-                          child: RichText(
+                      padding: const EdgeInsets.all(80.0),
+                      child: Column(
+                        children: [
+                          RichText(
+                            textAlign: TextAlign.justify,
                             text: TextSpan(
-                              text: 'Hello ! , \n',
-                              style: TaydinStyles.notoSans20Bold
-                                  .copyWith(color: Colors.black),
+                              text: 'Hi, my name is\n',
+                              style: TaydinStyles.notoSans20Bold.copyWith(
+                                  color: const Color(0xFF623F54), fontSize: 16),
                               children: <TextSpan>[
                                 TextSpan(
-                                    text:
-                                        'My name is Adnan Turgay and I enjoy creating things that live on the internet. My interest in mobile/web development started in 2020 when I decided to convert designs to applications - turning my passion into a profession. Fast-forward to today, and I have had the privilege of working for a good, product-based organization. I have strong UI and UX knowledge. Always open to learning and open to criticism.Keen to pursue a career in Flutter and Dart.',
-                                    style: TaydinStyles.notoSans20Bold
-                                        .copyWith(color: Colors.black)),
-                              ],
-                            ),
-                          ),
-                        )),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      // SizedBox(width: screenSize.width * 0.00001),
-                      ...Iterable<int>.generate(assets.length).map(
-                        (int pageIndex) => Row(
-                          children: [
-                            Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              children: [
-                                SizedBox(
-                                  height: screenSize.width / 11,
-                                  width: screenSize.width / 11.1,
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(5.0),
-                                    child: Image.asset(
-                                      assets[pageIndex],
-                                      fit: BoxFit.fill,
-                                    ),
+                                  text: 'Adnan Turgay. \n',
+                                  style: TaydinStyles.notoSans20Bold.copyWith(
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.bold,
+                                    fontSize: 30,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text:
+                                      "I'am a software engineer. I enjoy creating things that live on the internet ! My interest in mobile/web development started in 2020 when I decided to convert designs to applications - turning my passion into a profession. Fast-forward to today, and I have had the privilege of working for a good, product-based organization. I have strong UI and UX knowledge. Always open to learning and open to criticism. Keen to pursue a career in Flutter and Dart.",
+                                  style: TaydinStyles.poppins16Bold.copyWith(
+                                    color: Colors.black.withOpacity(0.9),
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 20,
                                   ),
                                 ),
                               ],
                             ),
-                            SizedBox(width: screenSize.width / 30),
-                          ],
-                        ),
+                          ),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                              // SizedBox(width: screenSize.width * 0.00001),
+                              ...Iterable<int>.generate(assets.length).map(
+                                (int pageIndex) => Row(
+                                  children: [
+                                    Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment.center,
+                                      children: [
+                                        SizedBox(
+                                          height: screenSize.width / 11,
+                                          width: screenSize.width / 11.1,
+                                          child: ClipRRect(
+                                            borderRadius:
+                                                BorderRadius.circular(5.0),
+                                            child: Image.asset(
+                                              assets[pageIndex],
+                                              fit: BoxFit.fill,
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    // SizedBox(width: screenSize.width / 50),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Divider(
+                            thickness: 1,
+                          ),
+                        ],
                       ),
-                    ],
+                    )),
                   ),
                 ],
               ),
