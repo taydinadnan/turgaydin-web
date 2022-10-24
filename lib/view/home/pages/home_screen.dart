@@ -7,6 +7,7 @@ import 'package:turgaydin/utils/featured_heading.dart';
 import 'package:turgaydin/utils/featured_tiles.dart';
 import 'package:turgaydin/utils/floating_quick_access_bar.dart';
 import 'package:turgaydin/utils/responsive.dart';
+import 'package:turgaydin/utils/welcome_tiles.dart';
 import 'package:turgaydin/utils/top_bar_contents.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -71,22 +72,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   height: screenSize.height * 0.45,
                   width: screenSize.width,
                   child: Image.asset(
-                    'assets/logo/a_Logo.png',
-                    fit: BoxFit.contain,
+                    'assets/logo/thumbnailv2.png',
+                    fit: BoxFit.fitWidth,
                   ),
                 ),
                 Column(
                   children: [
                     FloatingQuickAccessBar(screenSize: screenSize),
-                    Container(
-                      child: Column(
-                        children: [
-                          FeaturedHeading(
-                            screenSize: screenSize,
-                          ),
-                          FeaturedTiles(screenSize: screenSize)
-                        ],
-                      ),
+                    Column(
+                      children: [
+                        // FeaturedHeading(
+                        //   screenSize: screenSize,
+                        // ),
+                        WelcomeTiles(screenSize: screenSize),
+                        // FeaturedTiles(screenSize: screenSize)
+                      ],
                     ),
                   ],
                 )

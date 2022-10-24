@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:turgaydin/utils/responsive.dart';
+import 'package:turgaydin/utils/styles.dart';
 
 class DestinationHeading extends StatelessWidget {
   const DestinationHeading({
@@ -18,14 +19,11 @@ class DestinationHeading extends StatelessWidget {
               bottom: screenSize.height / 20,
             ),
             width: screenSize.width,
-            child: const Text(
-              'Lastest projects',
+            child: Text(
+              'My Noteworthy Projects',
               textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 24,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.bold,
-              ),
+              style: TaydinStyles.notoSans20Bold
+                  .copyWith(color: Colors.black, fontSize: 20),
             ),
           )
         : Container(
@@ -34,13 +32,15 @@ class DestinationHeading extends StatelessWidget {
               bottom: screenSize.height / 15,
             ),
             width: screenSize.width,
-            child: const Text(
-              'Lastest projects',
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                fontSize: 40,
-                fontFamily: 'Montserrat',
-                fontWeight: FontWeight.bold,
+            child: Padding(
+              padding: EdgeInsets.only(
+                left: screenSize.width / 5,
+              ),
+              child: Text(
+                'My Noteworthy Projects',
+                textAlign: TextAlign.start,
+                style: TaydinStyles.notoSans20Bold
+                    .copyWith(color: Colors.black, fontSize: 40),
               ),
             ),
           );

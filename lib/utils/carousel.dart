@@ -1,6 +1,7 @@
 import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter/material.dart';
 import 'package:turgaydin/utils/responsive.dart';
+import 'package:turgaydin/utils/styles.dart';
 
 class DestinationCarousel extends StatefulWidget {
   const DestinationCarousel({super.key});
@@ -20,15 +21,15 @@ class DestinationCarouselState extends State<DestinationCarousel> {
   int _current = 0;
 
   final List<String> images = [
-    'assets/logo/bringapp.jpeg',
-    'assets/logo/bringapp.jpeg',
-    'assets/logo/bringapp.jpeg',
+    'assets/logo/bringappIcon.png',
+    'assets/logo/shortlyIcon.png',
+    'assets/logo/tarotIcon.png',
   ];
 
   final List<String> places = [
     'Bring App',
-    'Bring App',
-    'Bring App',
+    'Shortly App',
+    'Tarot App',
   ];
 
   List<Widget> generateImageTiles(screenSize) {
@@ -130,14 +131,19 @@ class DestinationCarouselState extends State<DestinationCarousel> {
                                         padding: EdgeInsets.only(
                                             top: screenSize.height / 80,
                                             bottom: screenSize.height / 90),
-                                        child: Text(
-                                          places[i],
-                                          style: TextStyle(
-                                            color: _isHovering[i]
-                                                ? Colors.blueGrey[900]
-                                                : Colors.blueGrey,
-                                          ),
-                                        ),
+                                        child: Text(places[i],
+                                            style: TaydinStyles.notoSans12Normal
+                                                .copyWith(
+                                              color: _isHovering[i]
+                                                  ? Colors.blueGrey[900]
+                                                  : Colors.blueGrey,
+                                            )
+                                            // TextStyle(
+                                            // color: _isHovering[i]
+                                            //     ? Colors.blueGrey[900]
+                                            //     : Colors.blueGrey,
+                                            // ),
+                                            ),
                                       ),
                                     ),
                                     Visibility(
