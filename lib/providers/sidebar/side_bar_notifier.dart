@@ -60,7 +60,6 @@ class SideBarNotifier with ChangeNotifier {
         text: 'Contact Me',
         icon: Icons.contact_page,
         onPressed: () {
-          headline = const ContactPage();
           notifyListeners();
         },
       ),

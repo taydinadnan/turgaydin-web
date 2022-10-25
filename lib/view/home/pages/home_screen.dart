@@ -12,6 +12,7 @@ import 'package:turgaydin/utils/top_bar_contents.dart';
 import 'dart:js' as js;
 
 import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
+import 'package:turgaydin/view/contact/pages/contact_page.dart';
 import 'package:turgaydin/view/resume/pages/resume_page.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -143,8 +144,7 @@ class HomeScreenState extends State<HomeScreen> {
                               ResumePage(screenSize: screenSize)
                             else if (SideBarNotifier
                                 .getInstance.isContactVisible)
-                              Container(
-                                  color: Colors.pink, height: 400, width: 400)
+                              ContactPage(screenSize: screenSize)
 
                             // FeaturedTiles(screenSize: screenSize)
                           ],
@@ -160,7 +160,7 @@ class HomeScreenState extends State<HomeScreen> {
                 else if (SideBarNotifier.getInstance.isResumeVisible)
                   Container()
                 else if (SideBarNotifier.getInstance.isContactVisible)
-                  Container(color: Colors.pink, height: 400, width: 400),
+                  Container(),
                 if (SideBarNotifier.getInstance.isHomeVisible)
                   const DestinationCarousel()
                 else if (SideBarNotifier.getInstance.isAboutMeVisible)
@@ -168,7 +168,7 @@ class HomeScreenState extends State<HomeScreen> {
                 else if (SideBarNotifier.getInstance.isResumeVisible)
                   Container()
                 else if (SideBarNotifier.getInstance.isContactVisible)
-                  Container(color: Colors.pink, height: 400, width: 400),
+                  Container(),
                 SizedBox(height: screenSize.height / 10),
                 const BottomBar(),
               ],
