@@ -37,8 +37,6 @@ class SideBarNotifier with ChangeNotifier {
         text: 'About Me',
         icon: Icons.person,
         onPressed: () {
-          headline = const AboutMePage();
-
           notifyListeners();
         },
       ),

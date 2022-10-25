@@ -10,6 +10,8 @@ import 'package:turgaydin/utils/welcome_tiles.dart';
 import 'package:turgaydin/utils/top_bar_contents.dart';
 import 'dart:js' as js;
 
+import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -81,7 +83,7 @@ class HomeScreenState extends State<HomeScreen> {
             ),
           ],
         ),
-        backgroundColor: Color(0xFF493149).withOpacity(0.09),
+        backgroundColor: const Color(0xFF493149).withOpacity(0.09),
         extendBodyBehindAppBar: true,
         appBar: ResponsiveWidget.isSmallScreen(context)
             ? AppBar(
@@ -133,8 +135,7 @@ class HomeScreenState extends State<HomeScreen> {
                               WelcomeTiles(screenSize: screenSize)
                             else if (SideBarNotifier
                                 .getInstance.isAboutMeVisible)
-                              Container(
-                                  color: Colors.red, height: 400, width: 400)
+                              AboutMePage(screenSize: screenSize)
                             else if (SideBarNotifier
                                 .getInstance.isResumeVisible)
                               Container(
@@ -154,7 +155,7 @@ class HomeScreenState extends State<HomeScreen> {
                 if (SideBarNotifier.getInstance.isHomeVisible)
                   DestinationHeading(screenSize: screenSize)
                 else if (SideBarNotifier.getInstance.isAboutMeVisible)
-                  Container(color: Colors.red, height: 400, width: 400)
+                  DestinationHeading(screenSize: screenSize)
                 else if (SideBarNotifier.getInstance.isResumeVisible)
                   Container(color: Colors.green, height: 400, width: 400)
                 else if (SideBarNotifier.getInstance.isContactVisible)
@@ -162,7 +163,7 @@ class HomeScreenState extends State<HomeScreen> {
                 if (SideBarNotifier.getInstance.isHomeVisible)
                   const DestinationCarousel()
                 else if (SideBarNotifier.getInstance.isAboutMeVisible)
-                  Container(color: Colors.red, height: 400, width: 400)
+                  const DestinationCarousel()
                 else if (SideBarNotifier.getInstance.isResumeVisible)
                   Container(color: Colors.green, height: 400, width: 400)
                 else if (SideBarNotifier.getInstance.isContactVisible)
