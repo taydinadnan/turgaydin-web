@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tab_container/tab_container.dart';
 import 'package:turgaydin/utils/responsive.dart';
-import 'package:turgaydin/utils/styles.dart';
 import 'package:turgaydin/view/aboutMe/widgets/education.dart';
 import 'package:turgaydin/view/aboutMe/widgets/personal.dart';
 import 'package:turgaydin/view/aboutMe/widgets/skills.dart';

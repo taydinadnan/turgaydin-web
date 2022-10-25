@@ -16,7 +16,7 @@ class EducationTab extends StatelessWidget {
           children: [
             Wrap(
               children: [
-                Text(
+                const Text(
                   "-Visoka škola 'CEPS' Kiseljak",
                   style: TaydinStyles.poppins16Bold,
                   overflow: TextOverflow.ellipsis,
@@ -42,7 +42,7 @@ class EducationTab extends StatelessWidget {
           children: [
             Wrap(
               children: [
-                Text(
+                const Text(
                   "-Flutter & Dart",
                   style: TaydinStyles.poppins16Bold,
                   overflow: TextOverflow.ellipsis,

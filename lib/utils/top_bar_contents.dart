@@ -10,17 +10,6 @@ class TopBarContents extends StatefulWidget {
 }
 
 class TopBarContentsState extends State<TopBarContents> {
-  final List _isHovering = [
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false
-  ];
-
   @override
   Widget build(BuildContext context) {
     var screenSize = MediaQuery.of(context).size;

@@ -218,10 +218,10 @@ class DestinationCarouselState extends State<DestinationCarousel> {
                                             ),
                                         ],
                                       ),
-                                      Positioned(
+                                      const Positioned(
                                         right: 10,
                                         child: OnHoverButton(
-                                          child: Container(
+                                          child: SizedBox(
                                             height: 30,
                                             width: 30,
                                             child: Icon(Icons.info_sharp),
@@ -265,7 +265,7 @@ class DestinationCarouselState extends State<DestinationCarousel> {
                           ),
                         ),
                       )
-                    : Center()
+                    : const Center()
               ],
             ));
   }
