@@ -77,33 +77,31 @@ class PersonalTab extends StatelessWidget {
             ),
           ],
         ),
-        Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: const [
-              Text(
-                "Languages:",
-                style: TaydinStyles.poppins16Bold,
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                "Turkish",
-                style: TaydinStyles.poppins16SemiBold,
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                "English",
-                style: TaydinStyles.poppins16SemiBold,
-                overflow: TextOverflow.ellipsis,
-              ),
-              Text(
-                "Bosnian",
-                style: TaydinStyles.poppins16SemiBold,
-                overflow: TextOverflow.ellipsis,
-              ),
-            ],
-          ),
+        Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: const [
+            Text(
+              "Languages:",
+              style: TaydinStyles.poppins16Bold,
+              overflow: TextOverflow.ellipsis,
+            ),
+            Text(
+              "Turkish",
+              style: TaydinStyles.poppins16SemiBold,
+              overflow: TextOverflow.ellipsis,
+            ),
+            Text(
+              "English",
+              style: TaydinStyles.poppins16SemiBold,
+              overflow: TextOverflow.ellipsis,
+            ),
+            Text(
+              "Bosnian",
+              style: TaydinStyles.poppins16SemiBold,
+              overflow: TextOverflow.ellipsis,
+            ),
+          ],
         ),
       ],
     );

@@ -86,7 +86,8 @@ class FeaturedTiles extends StatelessWidget {
                             color: Colors.blue.withOpacity(0.5),
                             spreadRadius: 1,
                             blurRadius: 7,
-                            offset: Offset(3, 3), // changes position of shadow
+                            offset: const Offset(
+                                3, 3), // changes position of shadow
                           ),
                         ]),
                         height: screenSize.width / 6,

@@ -8,9 +8,11 @@ import 'package:turgaydin/utils/floating_quick_access_bar.dart';
 import 'package:turgaydin/utils/responsive.dart';
 import 'package:turgaydin/utils/welcome_tiles.dart';
 import 'package:turgaydin/utils/top_bar_contents.dart';
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
 import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
+import 'package:turgaydin/view/resume/pages/resume_page.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -138,8 +140,7 @@ class HomeScreenState extends State<HomeScreen> {
                               AboutMePage(screenSize: screenSize)
                             else if (SideBarNotifier
                                 .getInstance.isResumeVisible)
-                              Container(
-                                  color: Colors.green, height: 400, width: 400)
+                              ResumePage(screenSize: screenSize)
                             else if (SideBarNotifier
                                 .getInstance.isContactVisible)
                               Container(
@@ -157,7 +158,7 @@ class HomeScreenState extends State<HomeScreen> {
                 else if (SideBarNotifier.getInstance.isAboutMeVisible)
                   DestinationHeading(screenSize: screenSize)
                 else if (SideBarNotifier.getInstance.isResumeVisible)
-                  Container(color: Colors.green, height: 400, width: 400)
+                  Container()
                 else if (SideBarNotifier.getInstance.isContactVisible)
                   Container(color: Colors.pink, height: 400, width: 400),
                 if (SideBarNotifier.getInstance.isHomeVisible)
@@ -165,7 +166,7 @@ class HomeScreenState extends State<HomeScreen> {
                 else if (SideBarNotifier.getInstance.isAboutMeVisible)
                   const DestinationCarousel()
                 else if (SideBarNotifier.getInstance.isResumeVisible)
-                  Container(color: Colors.green, height: 400, width: 400)
+                  Container()
                 else if (SideBarNotifier.getInstance.isContactVisible)
                   Container(color: Colors.pink, height: 400, width: 400),
                 SizedBox(height: screenSize.height / 10),

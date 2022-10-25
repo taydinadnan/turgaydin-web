@@ -39,83 +39,58 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
         },
         onTap: () {
           if (items[i] == items[0]) {
-            print("Home");
             SideBarNotifier.getInstance.setIsHomeVisible(true);
             SideBarNotifier.getInstance.setIsAboutMeVisible(false);
             SideBarNotifier.getInstance.setIsResumeVisible(false);
             SideBarNotifier.getInstance.setIsContactVisible(false);
-
-            print("Home Visible: ${SideBarNotifier.getInstance.isHomeVisible}");
           }
           if (items[i] == items[1]) {
-            print("About Me");
             SideBarNotifier.getInstance.setIsHomeVisible(false);
             SideBarNotifier.getInstance.setIsAboutMeVisible(true);
             SideBarNotifier.getInstance.setIsResumeVisible(false);
             SideBarNotifier.getInstance.setIsContactVisible(false);
-            print(
-                "About Me Visible: ${SideBarNotifier.getInstance.isAboutMeVisible}");
           }
           if (items[i] == items[2]) {
-            print("Resume");
             SideBarNotifier.getInstance.setIsHomeVisible(false);
             SideBarNotifier.getInstance.setIsAboutMeVisible(false);
             SideBarNotifier.getInstance.setIsResumeVisible(true);
             SideBarNotifier.getInstance.setIsContactVisible(false);
-            print(
-                "Resume Visible: ${SideBarNotifier.getInstance.isResumeVisible}");
           }
           if (items[i] == items[3]) {
-            print("Contact");
             SideBarNotifier.getInstance.setIsHomeVisible(false);
             SideBarNotifier.getInstance.setIsAboutMeVisible(false);
             SideBarNotifier.getInstance.setIsResumeVisible(false);
             SideBarNotifier.getInstance.setIsContactVisible(true);
-            print(
-                "Contact Visible: ${SideBarNotifier.getInstance.isContactVisible}");
           }
         },
         child: InkWell(
           onTap: () {
             if (items[i] == items[0]) {
-              print("Home");
               SideBarNotifier.getInstance.setIsHomeVisible(true);
               SideBarNotifier.getInstance.setIsAboutMeVisible(false);
               SideBarNotifier.getInstance.setIsResumeVisible(false);
               SideBarNotifier.getInstance.setIsContactVisible(false);
-
-              print(
-                  "Home Visible: ${SideBarNotifier.getInstance.isHomeVisible}");
             }
             if (items[i] == items[1]) {
-              print("About Me");
               SideBarNotifier.getInstance.setIsHomeVisible(false);
               SideBarNotifier.getInstance.setIsAboutMeVisible(true);
               SideBarNotifier.getInstance.setIsResumeVisible(false);
               SideBarNotifier.getInstance.setIsContactVisible(false);
-              print(
-                  "About Me Visible: ${SideBarNotifier.getInstance.isAboutMeVisible}");
             }
             if (items[i] == items[2]) {
-              print("Resume");
               SideBarNotifier.getInstance.setIsHomeVisible(false);
               SideBarNotifier.getInstance.setIsAboutMeVisible(false);
               SideBarNotifier.getInstance.setIsResumeVisible(true);
               SideBarNotifier.getInstance.setIsContactVisible(false);
-              print(
-                  "Resume Visible: ${SideBarNotifier.getInstance.isResumeVisible}");
             }
             if (items[i] == items[3]) {
-              print("Contact");
               SideBarNotifier.getInstance.setIsHomeVisible(false);
               SideBarNotifier.getInstance.setIsAboutMeVisible(false);
               SideBarNotifier.getInstance.setIsResumeVisible(false);
               SideBarNotifier.getInstance.setIsContactVisible(true);
-              print(
-                  "Contact Visible: ${SideBarNotifier.getInstance.isContactVisible}");
             }
           },
-          child: Container(
+          child: SizedBox(
             height: widget.screenSize.height / 20,
             width: widget.screenSize.width / 7,
             child: Center(
@@ -171,7 +146,6 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                       child: InkWell(
                         onTap: () {
                           if (items[pageIndex] == items[0]) {
-                            print("Home");
                             SideBarNotifier.getInstance.setIsHomeVisible(true);
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(false);
@@ -179,12 +153,8 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                                 .setIsResumeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsContactVisible(false);
-
-                            print(
-                                "Home Visible: ${SideBarNotifier.getInstance.isHomeVisible}");
                           }
                           if (items[pageIndex] == items[1]) {
-                            print("About Me");
                             SideBarNotifier.getInstance.setIsHomeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(true);
@@ -192,11 +162,8 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                                 .setIsResumeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsContactVisible(false);
-                            print(
-                                "About Me Visible: ${SideBarNotifier.getInstance.isAboutMeVisible}");
                           }
                           if (items[pageIndex] == items[2]) {
-                            print("Resume");
                             SideBarNotifier.getInstance.setIsHomeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(false);
@@ -204,11 +171,8 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                                 .setIsResumeVisible(true);
                             SideBarNotifier.getInstance
                                 .setIsContactVisible(false);
-                            print(
-                                "Resume Visible: ${SideBarNotifier.getInstance.isResumeVisible}");
                           }
                           if (items[pageIndex] == items[3]) {
-                            print("Contact");
                             SideBarNotifier.getInstance.setIsHomeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(false);
@@ -216,8 +180,6 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                                 .setIsResumeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsContactVisible(true);
-                            print(
-                                "Contact Visible: ${SideBarNotifier.getInstance.isContactVisible}");
                           }
                         },
                         child: Card(
