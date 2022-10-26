@@ -19,12 +19,10 @@ class DestinationHeading extends StatelessWidget {
               bottom: screenSize.height / 20,
             ),
             width: screenSize.width,
-            child: Text(
-              'My Noteworthy Projects',
-              textAlign: TextAlign.center,
-              style: TaydinStyles.notoSans20Bold
-                  .copyWith(color: Colors.black, fontSize: 20),
-            ),
+            child: Text('My Noteworthy Projects',
+                textAlign: TextAlign.center,
+                style: TaydinStyles.openSansTitle
+                    .copyWith(fontSize: 30, fontWeight: FontWeight.bold)),
           )
         : Container(
             padding: EdgeInsets.only(
@@ -32,12 +30,10 @@ class DestinationHeading extends StatelessWidget {
               bottom: screenSize.height / 15,
             ),
             width: screenSize.width,
-            child: Text(
-              'My Noteworthy Projects',
-              textAlign: TextAlign.center,
-              style: TaydinStyles.notoSans20Bold
-                  .copyWith(color: Colors.black, fontSize: 40),
-            ),
+            child: Text('My Noteworthy Projects',
+                textAlign: TextAlign.center,
+                style: TaydinStyles.openSansTitle
+                    .copyWith(fontSize: 30, fontWeight: FontWeight.bold)),
           );
   }
 }

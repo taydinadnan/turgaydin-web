@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
 import 'package:turgaydin/utils/responsive.dart';
+import 'package:turgaydin/utils/styles.dart';
 
 class FloatingQuickAccessBar extends StatefulWidget {
   const FloatingQuickAccessBar({
@@ -96,10 +97,17 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
             child: Center(
               child: Text(
                 items[i],
-                style: TextStyle(
+                style: TaydinStyles.openSansNormal.copyWith(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 15,
                   color:
                       _isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
                 ),
+
+                // TextStyle(
+                //   color:
+                //       _isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
+                // ),
               ),
             ),
           ),

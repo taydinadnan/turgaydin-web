@@ -51,8 +51,7 @@ class WelcomeTiles extends StatelessWidget {
                           textAlign: TextAlign.justify,
                           text: TextSpan(
                             text: 'Hi, my name is\n',
-                            style: TaydinStyles.notoSans20Bold.copyWith(
-                                color: const Color(0xFF623F54), fontSize: 16),
+                            style: TaydinStyles.openSansParagraph,
                             children: <TextSpan>[
                               TextSpan(
                                 text: 'Adnan Turgay. \n',
@@ -140,25 +139,22 @@ class WelcomeTiles extends StatelessWidget {
                             textAlign: TextAlign.justify,
                             text: TextSpan(
                               text: 'Hi, my name is\n',
-                              style: TaydinStyles.notoSans20Bold.copyWith(
+                              style: TaydinStyles.openSansParagraph.copyWith(
                                   color: const Color(0xFF623F54), fontSize: 16),
                               children: <TextSpan>[
                                 TextSpan(
                                   text: 'Adnan Turgay. \n',
-                                  style: TaydinStyles.notoSans20Bold.copyWith(
-                                    color: Colors.black,
-                                    fontWeight: FontWeight.bold,
-                                    fontSize: 30,
-                                  ),
+                                  style: TaydinStyles.openSansParagraph
+                                      .copyWith(
+                                          fontSize: 30, color: Colors.black),
                                 ),
                                 TextSpan(
                                   text:
                                       "I'am a software engineer. I enjoy creating things that live on the internet ! My interest in mobile/web development started in 2020 when I decided to convert designs to applications - turning my passion into a profession. Fast-forward to today, and I have had the privilege of working for a good, product-based organization. I have strong UI and UX knowledge. Always open to learning and open to criticism. Keen to pursue a career in Flutter and Dart.",
-                                  style: TaydinStyles.poppins16Bold.copyWith(
-                                    color: Colors.black.withOpacity(0.9),
-                                    fontWeight: FontWeight.w500,
-                                    fontSize: 20,
-                                  ),
+                                  style: TaydinStyles.openSansParagraph
+                                      .copyWith(
+                                          fontStyle: FontStyle.italic,
+                                          color: Colors.black),
                                 ),
                               ],
                             ),

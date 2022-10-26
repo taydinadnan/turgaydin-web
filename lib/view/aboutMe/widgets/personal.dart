@@ -6,104 +6,109 @@ class PersonalTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+    return Padding(
+      padding: const EdgeInsets.only(top: 50.0, left: 50, right: 50),
+      child: FittedBox(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
               "Adnan Turgay Aydin",
-              style: TaydinStyles.poppins16Bold.copyWith(fontSize: 20),
-              overflow: TextOverflow.ellipsis,
+              style: TaydinStyles.openSansNormal.copyWith(
+                fontWeight: FontWeight.bold,
+                fontSize: 30,
+              ),
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.01,
             ),
             Wrap(
-              children: const [
+              children: [
                 Text(
                   "Nationality :",
-                  style: TaydinStyles.poppins16Bold,
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.black.withOpacity(0.5)),
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   " Turkey",
-                  style: TaydinStyles.poppins16SemiBold,
+                  // style: TaydinStyles.poppins16Bold
+                  //     .copyWith(color: Colors.white.withOpacity(0.8)),
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
+
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
             Wrap(
-              children: const [
+              children: [
                 Text(
                   "Age: ",
-                  style: TaydinStyles.poppins16Bold,
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.black.withOpacity(0.5)),
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   "26.04.1997",
-                  style: TaydinStyles.poppins16SemiBold,
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
             Wrap(
-              children: const [
+              children: [
                 Text(
                   "Profession : ",
-                  style: TaydinStyles.poppins16Bold,
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.black.withOpacity(0.5)),
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   "Flutter Developer",
-                  style: TaydinStyles.poppins16SemiBold,
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
             Wrap(
-              children: const [
+              children: [
                 Text(
                   "Location: ",
-                  style: TaydinStyles.poppins16Bold,
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.black.withOpacity(0.5)),
                   overflow: TextOverflow.ellipsis,
                 ),
                 Text(
                   "Sarajevo, BiH",
-                  style: TaydinStyles.poppins16SemiBold,
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
           ],
         ),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            Text(
-              "Languages:",
-              style: TaydinStyles.poppins16Bold,
-              overflow: TextOverflow.ellipsis,
-            ),
-            Text(
-              "Turkish",
-              style: TaydinStyles.poppins16SemiBold,
-              overflow: TextOverflow.ellipsis,
-            ),
-            Text(
-              "English",
-              style: TaydinStyles.poppins16SemiBold,
-              overflow: TextOverflow.ellipsis,
-            ),
-            Text(
-              "Bosnian",
-              style: TaydinStyles.poppins16SemiBold,
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
-        ),
-      ],
+      ),
     );
   }
 }
