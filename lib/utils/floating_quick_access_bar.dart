@@ -174,6 +174,8 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(false);
                             SideBarNotifier.getInstance
+                                .setIsMyWorkVisible(false);
+                            SideBarNotifier.getInstance
                                 .setIsResumeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsContactVisible(false);
@@ -182,6 +184,8 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                             SideBarNotifier.getInstance.setIsHomeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(true);
+                            SideBarNotifier.getInstance
+                                .setIsMyWorkVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsResumeVisible(false);
                             SideBarNotifier.getInstance
@@ -192,7 +196,9 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(false);
                             SideBarNotifier.getInstance
-                                .setIsResumeVisible(true);
+                                .setIsMyWorkVisible(true);
+                            SideBarNotifier.getInstance
+                                .setIsResumeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsContactVisible(false);
                           }
@@ -200,6 +206,19 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
                             SideBarNotifier.getInstance.setIsHomeVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsAboutMeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsMyWorkVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsResumeVisible(true);
+                            SideBarNotifier.getInstance
+                                .setIsContactVisible(true);
+                          }
+                          if (items[pageIndex] == items[4]) {
+                            SideBarNotifier.getInstance.setIsHomeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsAboutMeVisible(false);
+                            SideBarNotifier.getInstance
+                                .setIsMyWorkVisible(false);
                             SideBarNotifier.getInstance
                                 .setIsResumeVisible(false);
                             SideBarNotifier.getInstance
