@@ -80,8 +80,8 @@ class AboutMePage extends StatelessWidget {
                   child: TabContainer(
                     colors: <Color>[
                       Colors.red.shade200,
-                      const Color(0xffa275e3),
-                      const Color(0xff9aebed),
+                      Colors.pink.shade200,
+                      Colors.purple.shade200.withOpacity(0.9),
                     ],
                     tabs: const [
                       'Personal',

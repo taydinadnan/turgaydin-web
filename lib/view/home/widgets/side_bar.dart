@@ -15,11 +15,11 @@ class SidebarPageState extends State<SidebarPage> {
   List<CollapsibleItem> _items = [];
   bool collapsAction = true;
 
-  @override
-  void initState() {
-    _items = SideBarNotifier.getInstance.generateItems;
-    super.initState();
-  }
+  // @override
+  // void initState() {
+  //   _items = SideBarNotifier.getInstance.generateItems;
+  //   super.initState();
+  // }
 
   @override
   Widget build(BuildContext context) {

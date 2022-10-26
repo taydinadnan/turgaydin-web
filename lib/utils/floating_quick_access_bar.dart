@@ -16,13 +16,14 @@ class FloatingQuickAccessBar extends StatefulWidget {
 }
 
 class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
-  final List _isHovering = [false, false, false, false];
+  final List _isHovering = [false, false, false, false, false];
   List<Widget> rowElements = [];
 
-  List<String> items = ['Home', 'About Me', 'Resume', 'Contact'];
+  List<String> items = ['Home', 'About Me', 'My Work', 'Resume', 'Contact'];
   List<IconData> icons = [
     Icons.home,
     Icons.person,
+    Icons.work,
     Icons.document_scanner_rounded,
     Icons.contact_page
   ];
@@ -31,6 +32,8 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
     rowElements.clear();
     for (int i = 0; i < items.length; i++) {
       Widget elementTile = InkWell(
+        borderRadius: BorderRadius.circular(20),
+        radius: 30,
         splashColor: Colors.transparent,
         hoverColor: Colors.transparent,
         onHover: (value) {
@@ -65,10 +68,13 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
           }
         },
         child: InkWell(
+          borderRadius: BorderRadius.circular(12),
+          radius: 20,
           onTap: () {
             if (items[i] == items[0]) {
               SideBarNotifier.getInstance.setIsHomeVisible(true);
               SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+              SideBarNotifier.getInstance.setIsMyWorkVisible(false);
               SideBarNotifier.getInstance.setIsResumeVisible(false);
               SideBarNotifier.getInstance.setIsContactVisible(false);
             }
@@ -81,27 +87,37 @@ class FloatingQuickAccessBarState extends State<FloatingQuickAccessBar> {
             if (items[i] == items[2]) {
               SideBarNotifier.getInstance.setIsHomeVisible(false);
               SideBarNotifier.getInstance.setIsAboutMeVisible(false);
-              SideBarNotifier.getInstance.setIsResumeVisible(true);
+              SideBarNotifier.getInstance.setIsMyWorkVisible(true);
+              SideBarNotifier.getInstance.setIsResumeVisible(false);
               SideBarNotifier.getInstance.setIsContactVisible(false);
             }
             if (items[i] == items[3]) {
               SideBarNotifier.getInstance.setIsHomeVisible(false);
               SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+              SideBarNotifier.getInstance.setIsMyWorkVisible(false);
+
+              SideBarNotifier.getInstance.setIsResumeVisible(true);
+              SideBarNotifier.getInstance.setIsContactVisible(false);
+            }
+            if (items[i] == items[4]) {
+              SideBarNotifier.getInstance.setIsHomeVisible(false);
+              SideBarNotifier.getInstance.setIsAboutMeVisible(false);
+              SideBarNotifier.getInstance.setIsMyWorkVisible(false);
               SideBarNotifier.getInstance.setIsResumeVisible(false);
               SideBarNotifier.getInstance.setIsContactVisible(true);
             }
           },
-          child: SizedBox(
+          child: Container(
+            decoration: BoxDecoration(borderRadius: BorderRadius.circular(60)),
             height: widget.screenSize.height / 20,
-            width: widget.screenSize.width / 7,
+            width: widget.screenSize.width / 9,
             child: Center(
               child: Text(
                 items[i],
                 style: TaydinStyles.openSansNormal.copyWith(
                   fontWeight: FontWeight.bold,
                   fontSize: 15,
-                  color:
-                      _isHovering[i] ? Colors.blueGrey[900] : Colors.blueGrey,
+                  color: _isHovering[i] ? Colors.red[300] : Colors.blueGrey,
                 ),
 
                 // TextStyle(

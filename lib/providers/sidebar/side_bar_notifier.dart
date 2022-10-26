@@ -1,9 +1,7 @@
-import 'package:collapsible_sidebar/collapsible_sidebar.dart';
 import 'package:flutter/material.dart';
 
-import 'package:turgaydin/view/contact/pages/contact_page.dart';
 import 'package:turgaydin/view/home/pages/home_page.dart';
-import 'package:turgaydin/view/myWork/pages/my_work_page.dart';
+import 'package:turgaydin/view/myWork/widgets/projects.dart';
 
 class SideBarNotifier with ChangeNotifier {
   static SideBarNotifier? _instance;
@@ -18,53 +16,6 @@ class SideBarNotifier with ChangeNotifier {
   }
 
   Widget headline = const HomePage();
-
-  List<CollapsibleItem> get generateItems {
-    return [
-      CollapsibleItem(
-        text: 'Home',
-        icon: Icons.home,
-        onPressed: () {
-          headline = const HomePage();
-
-          notifyListeners();
-        },
-        isSelected: true,
-      ),
-      CollapsibleItem(
-        text: 'About Me',
-        icon: Icons.person,
-        onPressed: () {
-          notifyListeners();
-        },
-      ),
-      CollapsibleItem(
-        text: 'My Work',
-        icon: Icons.work,
-        onPressed: () {
-          headline = const MyWorkPage();
-
-          notifyListeners();
-        },
-      ),
-      CollapsibleItem(
-        text: 'Resume',
-        icon: Icons.document_scanner_rounded,
-        onPressed: () {
-          // headline =  ResumePage();
-
-          notifyListeners();
-        },
-      ),
-      CollapsibleItem(
-        text: 'Contact Me',
-        icon: Icons.contact_page,
-        onPressed: () {
-          notifyListeners();
-        },
-      ),
-    ];
-  }
 
   void setheadlineHome() {
     headline = const HomePage();
@@ -81,6 +32,13 @@ class SideBarNotifier with ChangeNotifier {
   bool get isAboutMeVisible => _isAboutMeVisible;
   void setIsAboutMeVisible(bool value) {
     _isAboutMeVisible = value;
+    notifyListeners();
+  }
+
+  bool _isMyWorkVisible = true;
+  bool get isMyWorkVisible => _isMyWorkVisible;
+  void setIsMyWorkVisible(bool value) {
+    _isMyWorkVisible = value;
     notifyListeners();
   }
 
@@ -105,4 +63,27 @@ class SideBarNotifier with ChangeNotifier {
     notifyListeners();
     print(_isHovered);
   }
+
+  List<ProjectsWidget> projects = [
+    const ProjectsWidget(
+      projectName: "Bring App",
+      description: "Food Delivery App",
+      image: "assets/logo/bringapp.jpeg",
+    ),
+    const ProjectsWidget(
+      projectName: "Tarot App",
+      description: "Tellers app",
+      image: "assets/logo/tarotIcon.png",
+    ),
+    const ProjectsWidget(
+      projectName: "Shortly App",
+      description: "Link Shortener app",
+      image: "assets/logo/shortlyIcon.png",
+    ),
+    const ProjectsWidget(
+      projectName: "Flutter Developer Portfolio",
+      description: "Flutter web project",
+      image: "assets/logo/1.png",
+    ),
+  ];
 }

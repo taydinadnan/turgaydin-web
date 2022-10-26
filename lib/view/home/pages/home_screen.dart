@@ -14,6 +14,7 @@ import 'dart:js' as js;
 
 import 'package:turgaydin/view/aboutMe/pages/about_me_page.dart';
 import 'package:turgaydin/view/contact/pages/contact_page.dart';
+import 'package:turgaydin/view/myWork/pages/my_work_page.dart';
 import 'package:turgaydin/view/resume/pages/resume_page.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -137,6 +138,9 @@ class HomeScreenState extends State<HomeScreen> {
                             else if (SideBarNotifier
                                 .getInstance.isAboutMeVisible)
                               AboutMePage(screenSize: screenSize)
+                            else if (SideBarNotifier
+                                .getInstance.isMyWorkVisible)
+                              MyWorkPage(screenSize: screenSize)
                             else if (SideBarNotifier
                                 .getInstance.isResumeVisible)
                               ResumePage(screenSize: screenSize)
