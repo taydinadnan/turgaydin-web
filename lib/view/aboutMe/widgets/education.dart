@@ -7,7 +7,8 @@ class EducationTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(left: 50.0, right: 50, top: 20),
+      padding:
+          const EdgeInsets.only(left: 25.0, right: 25, top: 25, bottom: 25),
       child: FittedBox(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

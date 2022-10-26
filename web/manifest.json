@@ -1,11 +1,11 @@
 {
-    "name": "turgaydin",
-    "short_name": "turgaydin",
+    "name": "Adnan Turgay Aydin",
+    "short_name": "Adnan Turgay",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "Portfolio",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

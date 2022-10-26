@@ -31,7 +31,7 @@ class MyApp extends StatelessWidget {
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Flutter Demo',
+        title: 'Adnan Turgay Aydin',
         theme: ThemeData(
           primarySwatch: Colors.red,
         ),

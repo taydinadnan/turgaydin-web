@@ -7,7 +7,8 @@ class SkillsTab extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 25.0, left: 50, right: 25),
+      padding:
+          const EdgeInsets.only(top: 25.0, left: 25, right: 25, bottom: 25),
       child: FittedBox(
         child: Wrap(
           alignment: WrapAlignment.start,
