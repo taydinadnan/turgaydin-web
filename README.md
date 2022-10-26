@@ -1,6 +1,22 @@
 # turgaydin
 
-A new Flutter project.
+A new Flutter Web project.
+
+Flutter Developer portfolio made with only Flutter.
+
+
+
+Screenshots:
+
+
+![alt text](assets/logo/1.png)
+
+![alt text](assets/logo/2.png)
+
+![alt text](assets/logo/3.png)
+
+![alt text](assets/logo/4.png)
+
 
 ## Getting Started
 
