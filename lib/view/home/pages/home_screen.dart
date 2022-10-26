@@ -6,6 +6,7 @@ import 'package:turgaydin/utils/carousel.dart';
 import 'package:turgaydin/utils/destination_heading.dart';
 import 'package:turgaydin/utils/floating_quick_access_bar.dart';
 import 'package:turgaydin/utils/responsive.dart';
+import 'package:turgaydin/utils/styles.dart';
 import 'package:turgaydin/utils/welcome_tiles.dart';
 import 'package:turgaydin/utils/top_bar_contents.dart';
 // ignore: avoid_web_libraries_in_flutter
@@ -94,12 +95,9 @@ class HomeScreenState extends State<HomeScreen> {
                 elevation: 0,
                 title: Text(
                   'Adnan Turgay Aydin',
-                  style: TextStyle(
-                    color: Colors.blueGrey.shade100,
-                    fontSize: 20,
-                    fontFamily: 'Montserrat',
-                    fontWeight: FontWeight.w400,
-                    letterSpacing: 3,
+                  style: TaydinStyles.remachineTitle.copyWith(
+                    color: Colors.white,
+                    fontSize: 50,
                   ),
                 ),
               )

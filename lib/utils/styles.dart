@@ -275,4 +275,24 @@ abstract class TaydinStyles {
     fontWeight: FontWeight.w700,
     fontSize: 30,
   );
+
+  static const remachineTitle = TextStyle(
+    fontFamily: 'RemachineScript_Personal_Use',
+    fontSize: 30,
+  );
+
+  static const openSansTitle = TextStyle(
+    fontFamily: 'OpenSans-CondBold',
+    fontSize: 30,
+  );
+
+  static const openSansNormal = TextStyle(
+    fontFamily: 'OpenSans-CondLight',
+    fontSize: 30,
+  );
+
+  static const openSansParagraph = TextStyle(
+    fontFamily: 'OpenSans-CondLightItalic',
+    fontSize: 20,
+  );
 }

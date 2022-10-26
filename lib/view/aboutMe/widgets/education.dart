@@ -6,114 +6,155 @@ class EducationTab extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Column(
+    return Padding(
+      padding: const EdgeInsets.only(left: 50.0, right: 50, top: 20),
+      child: FittedBox(
+        child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Wrap(
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "-Visoka škola 'CEPS' Kiseljak",
-                  style: TaydinStyles.poppins16Bold,
-                  overflow: TextOverflow.ellipsis,
+                Wrap(
+                  children: [
+                    Text(
+                      "-Visoka škola 'CEPS' Kiseljak",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      " 2020 - 2023",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
                 ),
                 Text(
-                  " 2020 - 2023",
-                  style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
+                  " Information Technology",
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
-            Text(
-              " Information Technology",
-              style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
-        ),
-        const Divider(),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Wrap(
+            const Divider(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "-Flutter & Dart",
-                  style: TaydinStyles.poppins16Bold,
-                  overflow: TextOverflow.ellipsis,
+                Wrap(
+                  children: [
+                    Text(
+                      "-Flutter & Dart",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      " 2021",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
                 ),
                 Text(
-                  " 2021",
-                  style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
+                  " Udemy - Created by Maximillian Schwarzmuller",
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
-            Text(
-              " Udemy - Created by Maximillian Schwarzmuller",
-              style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
-        ),
-        const Divider(),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Wrap(
+            const Divider(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "-UI - UX",
-                  style: TaydinStyles.poppins16Bold,
-                  overflow: TextOverflow.ellipsis,
+                Wrap(
+                  children: [
+                    Text(
+                      "-UI - UX",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      " 2021",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
                 ),
                 Text(
-                  " 2021",
-                  style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
+                  " Created by Google",
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
-            Text(
-              " Created by Google",
-              style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
-              overflow: TextOverflow.ellipsis,
-            ),
-          ],
-        ),
-        const Divider(),
-        Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Wrap(
+            const Divider(),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Text(
-                  "-Tech387 - Intern software engineer",
-                  style: TaydinStyles.poppins16Bold,
-                  overflow: TextOverflow.ellipsis,
+                Wrap(
+                  children: [
+                    Text(
+                      "-Tech387 - Intern software engineer ",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      "2022",
+                      style: TaydinStyles.openSansNormal.copyWith(
+                          fontWeight: FontWeight.bold,
+                          fontSize: 25,
+                          color: Colors.black.withOpacity(0.5)),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
                 ),
                 Text(
-                  "2022",
-                  style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
+                  "Tech387 - Flutter Developer",
+                  style: TaydinStyles.openSansNormal.copyWith(
+                      fontWeight: FontWeight.bold,
+                      fontSize: 25,
+                      color: Colors.white.withOpacity(0.8)),
                   overflow: TextOverflow.ellipsis,
                 ),
               ],
             ),
-            Text(
-              "Tech387 - Flutter Developer",
-              style: TaydinStyles.poppins16SemiBold.copyWith(fontSize: 15),
-              overflow: TextOverflow.ellipsis,
-            ),
           ],
         ),
-      ],
+      ),
     );
   }
 }

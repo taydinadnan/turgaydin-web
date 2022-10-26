@@ -2,15 +2,11 @@ import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:tab_container/tab_container.dart';
 import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
 import 'package:turgaydin/utils/on_hover_button.dart';
 import 'package:turgaydin/utils/responsive.dart';
 import 'package:turgaydin/utils/styles.dart';
 import 'package:turgaydin/utils/taydin_colors.dart';
-import 'package:turgaydin/view/aboutMe/widgets/education.dart';
-import 'package:turgaydin/view/aboutMe/widgets/personal.dart';
-import 'package:turgaydin/view/aboutMe/widgets/skills.dart';
 
 class ResumePage extends StatelessWidget {
   const ResumePage({Key? key, required this.screenSize}) : super(key: key);
@@ -39,29 +35,32 @@ class ResumePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            children: [
-                              Container(
-                                decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(16),
-                                  color: TaydinColors.backgroundGrey,
-                                ),
-                                child: const Padding(
-                                  padding: EdgeInsets.all(20.0),
-                                  child: Text(
-                                    "DOWNLOAD",
-                                    style: TaydinStyles.poppins28Bold,
+                          Container(
+                            width: screenSize.width / 2.2,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              children: [
+                                Container(
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(16),
+                                    color: TaydinColors.backgroundGrey,
+                                  ),
+                                  child: const Padding(
+                                    padding: EdgeInsets.all(20.0),
+                                    child: Text(
+                                      "DOWNLOAD",
+                                      style: TaydinStyles.poppins28Bold,
+                                    ),
                                   ),
                                 ),
-                              ),
-                              const Padding(
-                                padding:
-                                    EdgeInsets.only(bottom: 40.0, left: 10),
-                                child: Icon(Icons.info),
-                              ),
-                            ],
+                                const Padding(
+                                  padding:
+                                      EdgeInsets.only(bottom: 40.0, left: 10),
+                                  child: Icon(Icons.info),
+                                ),
+                              ],
+                            ),
                           ),
                           const SizedBox(height: 25),
                           SideBarNotifier.getInstance.isHovered
@@ -96,7 +95,11 @@ class ResumePage extends StatelessWidget {
                   const SizedBox(height: 30),
                   Align(
                     alignment: Alignment.center,
-                    child: Image.asset("assets/logo/Adnan.jpg"),
+                    child: Image.asset(
+                      "assets/logo/Adnan.jpg",
+                      height: screenSize.height / 1.5,
+                      width: screenSize.width / 1.5,
+                    ),
                   ),
                 ],
               ),
@@ -175,7 +178,11 @@ class ResumePage extends StatelessWidget {
                   const SizedBox(height: 30),
                   Align(
                     alignment: Alignment.center,
-                    child: Image.asset("assets/logo/Adnan.jpg"),
+                    child: Image.asset(
+                      "assets/logo/Adnan.jpg",
+                      height: screenSize.height / 1.0,
+                      width: screenSize.width / 1.0,
+                    ),
                   ),
                 ],
               ),

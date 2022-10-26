@@ -68,23 +68,8 @@ class BottomBar extends StatelessWidget {
               children: [
                 Row(
                   mainAxisSize: MainAxisSize.max,
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.end,
                   children: [
-                    const BottomBarColumn(
-                      heading: 'Contact',
-                      s1: 'Linked',
-                      s2: 'GitHub',
-                    ),
-                    const BottomBarColumn(
-                      heading: 'SOCIAL',
-                      s1: 'Twitter',
-                      s2: 'Instagram',
-                    ),
-                    Container(
-                      color: Colors.blueGrey,
-                      width: 2,
-                      height: 150,
-                    ),
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: const [

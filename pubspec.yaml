@@ -133,6 +133,14 @@ flutter:
         - asset: assets/fonts/NotoSans-Medium.ttf
         - asset: assets/fonts/NotoSans-SemiBold.ttf
         - asset: assets/fonts/NotoSans-Bold.ttf
+    - family: RemachineScript_Personal_Use
+      fonts:
+        - asset: assets/fonts/RemachineScript_Personal_Use.ttf
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-CondBold.ttf
+        - asset: assets/fonts/OpenSans-CondLight.ttf
+        - asset: assets/fonts/OpenSans-CondLightItalic.ttf
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

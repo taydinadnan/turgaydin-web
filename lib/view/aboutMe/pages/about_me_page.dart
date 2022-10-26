@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tab_container/tab_container.dart';
 import 'package:turgaydin/utils/responsive.dart';
+import 'package:turgaydin/utils/styles.dart';
 import 'package:turgaydin/view/aboutMe/widgets/education.dart';
 import 'package:turgaydin/view/aboutMe/widgets/personal.dart';
 import 'package:turgaydin/view/aboutMe/widgets/skills.dart';
@@ -50,6 +51,7 @@ class AboutMePage extends StatelessWidget {
                             'Education',
                             'Skills',
                           ],
+                          selectedTextStyle: TaydinStyles.openSansNormal,
                           children: [
                             Padding(
                               padding:
@@ -103,19 +105,14 @@ class AboutMePage extends StatelessWidget {
                       'Education',
                       'Skills',
                     ],
-                    children: [
-                      Padding(
-                        padding: EdgeInsets.only(left: screenSize.width / 30),
-                        child: const PersonalTab(),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: screenSize.width / 30),
-                        child: const EducationTab(),
-                      ),
-                      Padding(
-                        padding: EdgeInsets.only(left: screenSize.width / 30),
-                        child: const SkillsTab(),
-                      ),
+                    selectedTextStyle: TaydinStyles.openSansNormal
+                        .copyWith(color: Colors.white, fontSize: 16),
+                    unselectedTextStyle: TaydinStyles.openSansNormal
+                        .copyWith(color: Colors.black, fontSize: 10),
+                    children: const [
+                      PersonalTab(),
+                      EducationTab(),
+                      SkillsTab(),
                     ],
                   ),
                 )

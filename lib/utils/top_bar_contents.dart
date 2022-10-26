@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:turgaydin/utils/styles.dart';
 
 class TopBarContents extends StatefulWidget {
   final double opacity;
@@ -25,12 +26,9 @@ class TopBarContentsState extends State<TopBarContents> {
             children: [
               Text(
                 'Adnan Turgay Aydin',
-                style: TextStyle(
-                  color: Colors.blueGrey.shade100,
-                  fontSize: 20,
-                  fontFamily: 'Montserrat',
-                  fontWeight: FontWeight.w400,
-                  letterSpacing: 3,
+                style: TaydinStyles.remachineTitle.copyWith(
+                  color: Colors.white,
+                  fontSize: 50,
                 ),
               ),
             ],
