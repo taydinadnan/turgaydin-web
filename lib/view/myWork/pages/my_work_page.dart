@@ -17,26 +17,27 @@ class MyWorkPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return ResponsiveWidget.isSmallScreen(context)
         ? Padding(
-            padding: EdgeInsets.only(top: 50.0, left: screenSize.width / 6),
+            padding: EdgeInsets.only(top: 25.0, left: screenSize.width / 15),
             child: Row(
               children: [
                 Container(
                   height: screenSize.height,
-                  width: screenSize.width / 1.5,
-                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                  width: screenSize.width / 1.2,
+                  padding: const EdgeInsets.fromLTRB(0, 30, 0, 0),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      const Text("HEADER"),
                       Expanded(
                         child: ListView.builder(
                             itemCount:
                                 SideBarNotifier.getInstance.projects.length,
                             itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(bottom: 25.0),
-                                child:
-                                    SideBarNotifier.getInstance.projects[index],
+                              return FittedBox(
+                                child: Padding(
+                                  padding: const EdgeInsets.only(bottom: 25.0),
+                                  child: SideBarNotifier
+                                      .getInstance.projects[index],
+                                ),
                               );
                             }),
                       ),
@@ -50,27 +51,32 @@ class MyWorkPage extends StatelessWidget {
             padding: EdgeInsets.only(top: 50.0, left: screenSize.width / 6),
             child: Row(
               children: [
-                Container(
-                  height: screenSize.height,
-                  width: screenSize.width / 1.5,
-                  padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
-                  child: Column(
-                    mainAxisSize: MainAxisSize.max,
-                    children: [
-                      const Text("HEADER"),
-                      Expanded(
-                        child: ListView.builder(
-                            itemCount:
-                                SideBarNotifier.getInstance.projects.length,
-                            itemBuilder: (context, index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(bottom: 25.0),
-                                child:
-                                    SideBarNotifier.getInstance.projects[index],
-                              );
-                            }),
-                      ),
-                    ],
+                FittedBox(
+                  child: Container(
+                    height: screenSize.height * 2,
+                    width: screenSize.width / 1.5,
+                    // padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        Expanded(
+                          child: ListView.builder(
+                              shrinkWrap: true,
+                              itemCount:
+                                  SideBarNotifier.getInstance.projects.length,
+                              itemBuilder: (context, index) {
+                                return FittedBox(
+                                  child: Padding(
+                                    padding:
+                                        const EdgeInsets.only(bottom: 50.0),
+                                    child: SideBarNotifier
+                                        .getInstance.projects[index],
+                                  ),
+                                );
+                              }),
+                        ),
+                      ],
+                    ),
                   ),
                 )
               ],

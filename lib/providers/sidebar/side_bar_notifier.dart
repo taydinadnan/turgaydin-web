@@ -68,22 +68,22 @@ class SideBarNotifier with ChangeNotifier {
     const ProjectsWidget(
       projectName: "Bring App",
       description: "Food Delivery App",
-      image: "assets/logo/bringapp.jpeg",
+      image: "assets/logo/thumbnail.png",
     ),
     const ProjectsWidget(
       projectName: "Tarot App",
       description: "Tellers app",
-      image: "assets/logo/tarotIcon.png",
+      image: "assets/logo/thumbnail.png",
     ),
     const ProjectsWidget(
       projectName: "Shortly App",
       description: "Link Shortener app",
-      image: "assets/logo/shortlyIcon.png",
+      image: "assets/logo/thumbnail.png",
     ),
     const ProjectsWidget(
       projectName: "Flutter Developer Portfolio",
       description: "Flutter web project",
-      image: "assets/logo/1.png",
+      image: "assets/logo/thumbnail.png",
     ),
   ];
 }
