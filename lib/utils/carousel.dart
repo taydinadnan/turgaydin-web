@@ -28,9 +28,9 @@ class DestinationCarouselState extends State<DestinationCarousel> {
   int _current = 0;
 
   final List<String> images = [
-    'assets/logo/bringappIcon.png',
-    'assets/logo/shortlyIcon.png',
-    'assets/logo/tarotIcon.png',
+    'assets/logo/bring 1.png',
+    'assets/logo/shortly 3.png',
+    'assets/logo/tarot 3.png',
   ];
 
   final List<String> places = [

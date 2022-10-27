@@ -29,7 +29,7 @@ class ProjectsWidget extends StatelessWidget {
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(16),
-                    color: Colors.red.shade200,
+                    color: Colors.red.shade100.withOpacity(0.7),
                   ),
                   child: Padding(
                     padding: const EdgeInsets.all(25.0),
@@ -72,7 +72,7 @@ class ProjectsWidget extends StatelessWidget {
                         ),
                         CircleAvatar(
                           radius: 30,
-                          backgroundColor: Colors.red.shade200,
+                          backgroundColor: Colors.red.shade100.withOpacity(0.7),
                           backgroundImage: AssetImage("assets/logo/github.png"),
                         )
                       ],
