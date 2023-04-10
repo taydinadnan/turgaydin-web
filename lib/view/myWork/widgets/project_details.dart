@@ -1,8 +1,10 @@
+// ignore: avoid_web_libraries_in_flutter
+import 'dart:js' as js;
+
 import 'package:flutter/material.dart';
+
 import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
 import 'package:turgaydin/utils/styles.dart';
-
-import 'dart:js' as js;
 
 class ProjectDetails extends StatelessWidget {
   const ProjectDetails({Key? key}) : super(key: key);
@@ -50,22 +52,19 @@ class ProjectDetails extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 20),
-            Container(
-              child: CircleAvatar(
-                backgroundImage: AssetImage(
-                  SideBarNotifier.getInstance.isDescription1
-                      ? SideBarNotifier.getInstance.projects[0].image
-                      : SideBarNotifier.getInstance.isDescription2
-                          ? SideBarNotifier.getInstance.projects[1].image
-                          : SideBarNotifier.getInstance.isDescription3
-                              ? SideBarNotifier.getInstance.projects[2].image
-                              : SideBarNotifier.getInstance.isDescription4
-                                  ? SideBarNotifier
-                                      .getInstance.projects[3].image
-                                  : "",
-                ),
-                radius: 70,
+            CircleAvatar(
+              backgroundImage: AssetImage(
+                SideBarNotifier.getInstance.isDescription1
+                    ? SideBarNotifier.getInstance.projects[0].image
+                    : SideBarNotifier.getInstance.isDescription2
+                        ? SideBarNotifier.getInstance.projects[1].image
+                        : SideBarNotifier.getInstance.isDescription3
+                            ? SideBarNotifier.getInstance.projects[2].image
+                            : SideBarNotifier.getInstance.isDescription4
+                                ? SideBarNotifier.getInstance.projects[3].image
+                                : "",
               ),
+              radius: 70,
             ),
             const Divider(
               height: 3,
@@ -115,7 +114,7 @@ class ProjectDetails extends StatelessWidget {
               child: CircleAvatar(
                 radius: 30,
                 backgroundColor: Colors.red.shade100.withOpacity(0.7),
-                backgroundImage: AssetImage("assets/logo/github.png"),
+                backgroundImage: const AssetImage("assets/logo/github.png"),
               ),
             )
           ],

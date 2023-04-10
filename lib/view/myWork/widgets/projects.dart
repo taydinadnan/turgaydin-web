@@ -3,8 +3,8 @@ import 'package:provider/provider.dart';
 import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
 import 'package:turgaydin/utils/responsive.dart';
 import 'package:turgaydin/utils/styles.dart';
-import 'package:turgaydin/utils/taydin_colors.dart';
 
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
 class ProjectsWidget extends StatelessWidget {
@@ -25,7 +25,7 @@ class ProjectsWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Consumer<SideBarNotifier>(
         builder: (context, plansNotifier, child) => Center(
-              child: Container(
+              child: SizedBox(
                 width: 600,
                 height: 200,
                 child: Stack(
@@ -127,8 +127,8 @@ class ProjectsWidget extends StatelessWidget {
                                               .getInstance.isDescription3 ||
                                           SideBarNotifier
                                               .getInstance.isDescription4
-                                      ? Icon(Icons.arrow_circle_left)
-                                      : Icon(Icons.arrow_circle_right),
+                                      ? const Icon(Icons.arrow_circle_left)
+                                      : const Icon(Icons.arrow_circle_right),
                                 ),
                               ],
                             ),
@@ -136,17 +136,9 @@ class ProjectsWidget extends StatelessWidget {
                         ),
                       ),
                     ),
-                    Container(
-                      child: CircleAvatar(
-                        backgroundImage: AssetImage(image),
-                        radius: 90,
-                      ),
-
-                      // child: ClipRRect(
-                      //     borderRadius: BorderRadius.circular(60),
-                      //     child: Image.asset(
-                      //       image,
-                      //     )),
+                    CircleAvatar(
+                      backgroundImage: AssetImage(image),
+                      radius: 90,
                     ),
                   ],
                 ),

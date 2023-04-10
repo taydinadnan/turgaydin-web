@@ -12,7 +12,7 @@ class SidebarPage extends StatefulWidget {
 }
 
 class SidebarPageState extends State<SidebarPage> {
-  List<CollapsibleItem> _items = [];
+  final List<CollapsibleItem> _items = [];
   bool collapsAction = true;
 
   // @override

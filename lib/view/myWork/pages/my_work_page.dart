@@ -1,11 +1,10 @@
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:turgaydin/providers/sidebar/side_bar_notifier.dart';
-import 'package:turgaydin/utils/on_hover_button.dart';
 import 'package:turgaydin/utils/responsive.dart';
-import 'package:turgaydin/utils/styles.dart';
 import 'package:turgaydin/view/myWork/widgets/project_details.dart';
 
 class MyWorkPage extends StatelessWidget {
@@ -75,7 +74,7 @@ class MyWorkPage extends StatelessWidget {
             : FittedBox(
                 child: Row(
                   children: [
-                    Container(
+                    SizedBox(
                       height: screenSize.height * 1.4,
                       width: screenSize.width / 2.4,
                       // padding: const EdgeInsets.fromLTRB(0, 20, 0, 0),
@@ -137,7 +136,7 @@ class MyWorkPage extends StatelessWidget {
                         padding: const EdgeInsets.only(left: 50),
                         child: Column(
                           mainAxisSize: MainAxisSize.max,
-                          children: [
+                          children: const [
                             FittedBox(
                               child: ProjectDetails(),
                             ),

@@ -1,3 +1,4 @@
+// ignore: avoid_web_libraries_in_flutter
 import 'dart:js' as js;
 
 import 'package:flutter/material.dart';
@@ -35,7 +36,7 @@ class ResumePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Container(
+                          SizedBox(
                             width: screenSize.width / 2.2,
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.center,

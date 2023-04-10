@@ -61,7 +61,6 @@ class SideBarNotifier with ChangeNotifier {
   void onEntered(bool value) {
     _isHovered = value;
     notifyListeners();
-    print(_isHovered);
   }
 
   List<ProjectsWidget> projects = [
